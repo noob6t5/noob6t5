@@ -1,5 +1,5 @@
 <h1 align="center">Hi 👋, I'm noob6t5</h1>
-<h3 align="center">A dedicated learner with a deep interest in Linux malware development,R.E.,cryptography,& AI.</h3>
+<h3 align="center"> Beside's having other full time job i am a dedicated learner with a deep interest in Linux malware development,R.E.,cryptography,& AI. I do code in spare time.</h3>
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=noob6t5&label=Profile%20views&color=0e75b6&style=flat" alt="noob6t5" /> </p>
 
@@ -14,8 +14,6 @@
 - 🤝 I’m looking for help with **Memory Bypasses & building automation bot's,**
 
 <h3 align="left">Connect with me:</h3>
-<a href="https://fb.com/noob6t5" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="noob6t5" height="30" width="40" /></a>
-<a href="https://instagram.com/noob6t5" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="noob6t5" height="30" width="40" /></a>
 <a href="https://www.codechef.com/users/noob6t5" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.1.0/icons/codechef.svg" alt="noob6t5" height="30" width="40" /></a>
 <a href="https://www.hackerrank.com/noob6t5" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/hackerrank.svg" alt="noob6t5" height="30" width="40" /></a>
 <a href="https://codeforces.com/profile/noob6t5" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/codeforces.svg" alt="noob6t5" height="30" width="40" /></a>
