@@ -1,5 +1,5 @@
 <h1 align="center">Hi 👋, I'm noob6t5</h1>
-<h3 align="center"> Beside's having other full time job i am a dedicated learner with a deep interest in Linux malware development,R.E.,cryptography,& AI. I do code in spare time.</h3>
+<h3 align="center"> Beside's having other full time job i am a dedicated learner with a deep interest in Linux Kernel's,R.E.,cryptography,& AI. I do code in spare time.</h3>
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=noob6t5&label=Profile%20views&color=0e75b6&style=flat" alt="noob6t5" /> </p>
 
