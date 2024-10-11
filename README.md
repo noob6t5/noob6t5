@@ -7,7 +7,7 @@
 
 - 🔭 I’m currently working on **Polymorphic Keylogger**
 
-- 🌱 I’m currently learning **AI,alongside my passion's.**
+- 🌱 I’m currently learning **AI & assembly.**
 
 - 👯 I’m looking to collaborate on **Project based on PI and AI driven Project's**
 
