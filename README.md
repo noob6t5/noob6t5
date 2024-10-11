@@ -5,13 +5,13 @@
 
 <p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=noob6t5" alt="noob6t5" /></a> </p>
 
-- 🔭 I’m currently working on **Polymorphic Keylogger**
+- 🔭 I’m currently working on **Polymorphic Keylogger & Building one Database from Scratch **
 
 - 🌱 I’m currently learning **AI & assembly.**
 
 - 👯 I’m looking to collaborate on **Project based on PI and AI driven Project's**
 
-- 🤝 I’m looking for help with **Memory Bypasses & building automation bot's,**
+- 🤝 I’m looking for help with **Memory Bypasses & building automation bot's.**
 
 <h3 align="left">Connect with me:</h3>
 <a href="https://www.codechef.com/users/noob6t5" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.1.0/icons/codechef.svg" alt="noob6t5" height="30" width="40" /></a>
