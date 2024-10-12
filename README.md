@@ -12,7 +12,7 @@
 
 - 🤝 I’m looking for help with **Memory Bypasses & building automation bot's.**
 
-<h3 align="left">Connect with me:</h3>
+<h3 align="left">Active In :</h3>
 <a href="https://www.codechef.com/users/noob6t5" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.1.0/icons/codechef.svg" alt="noob6t5" height="30" width="40" /></a>
 <a href="https://www.hackerrank.com/noob6t5" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/hackerrank.svg" alt="noob6t5" height="30" width="40" /></a>
 <a href="https://codeforces.com/profile/noob6t5" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/codeforces.svg" alt="noob6t5" height="30" width="40" /></a>
