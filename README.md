@@ -3,7 +3,7 @@
 
 ## 👤 Who I Am
  
-I chase **vulns**, build **bots**, and **weaponize silence**.
+I build **bots** to chase **vulns**.
 
 Recon, fuzzing, parsing, exploitation —  
 **streamlined, optimized, weaponized.**
@@ -25,7 +25,7 @@ Recon, fuzzing, parsing, exploitation —
 - Build **exploit chains**, **fuzzers**, and **silent recon flows**  
 - Chain tools to **hunt at scale** — without tripping wires  
 - Reverse engineer **weird formats**, **unknown APIs**, and **forgotten edge cases**
-- U can Roam for taking some testo of tools in **Repo** that i released from my **WAR MACHINE**.
+- U can Roam for taking some test of tools in **Repo** that i released from my **WAR MACHINE**.
 
 ---
 
