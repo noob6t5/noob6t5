@@ -13,4 +13,3 @@
 
 > _Everything here is a weapon under construction._  
 > _Quiet now. Loud later._  
-> _I don’t leak tools. I drop payloads._
