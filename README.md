@@ -26,11 +26,13 @@ Everything I build feeds into **[Hydrapulse](#-hydrapulse--my-red-team-automatio
 
 > Multi-headed beast engineered for autonomous red teaming across three verticals.
 
-- 🕸️ **Web2 Head** — Misconfig shredding, IDOR chains, stealthy recon.
-- 🔗 **Web3 Head** — Contract breakage, DeFi logic bugs, protocol chaos.
-- 🧠 **AI/ML Head** — Jailbreaks, model fuzzing, adversarial inputs, and attack chaining.
-
 Hydrapulse isn’t just a toolkit — it’s a f*cking war engine. Under active development.
+
+| Domain  | Hydra Head Name | Role Description                            | Directory Path    |
+| ------- | --------------- | ------------------------------------------- | ----------------- |
+| Web2    | `VENIN`         | Web attack automation, recon, injection     | `modules/venin/`  |
+| Web3    | `OBLIV`         | Smart contract abuse, DeFi exploit          | `modules/obliv/`  |
+| AI / ML | `PSYKHE`        | LLM fuzzing, prompt injections, logic break | `modules/psykhe/` |
 
 ---
 
