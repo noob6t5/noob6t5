@@ -26,7 +26,7 @@ Everything I build feeds into **[Hydrapulse](#-hydrapulse--my-red-team-automatio
 
 > Multi-headed beast engineered for autonomous red teaming across three verticals.
 
-Hydrapulse isn’t just a toolkit — it’s a f*cking war engine. Under active development.
+Hydrapulse isn’t just a toolkit — it’s a  war engine. Under active development.
 
 | Domain  | Hydra Head Name | Role Description                            | Directory Path    |
 | ------- | --------------- | ------------------------------------------- | ----------------- |
