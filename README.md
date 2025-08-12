@@ -62,7 +62,3 @@ Hydrapulse isn’t just a toolkit — it’s a  war engine. Under active develop
 
 ---
 
-## ⚔️ Let the Hunt Begin
-
-This profile is under active evolution. It’s not a portfolio — it’s a battlefield.
-
