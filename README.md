@@ -2,16 +2,6 @@
 
 ---
 
-## ⚡ About Me
-
-I build offensive tooling that automates chaos across Web2, Web3, and AI/ML attack surfaces.
-
-I chased all three like a rabid dog, got lost in the noise. Now I’m laser-focused on **Web2 and AI** — crafting precise, modular tooling that punches through real systems. No filler. No theory. Just red team code that *bleeds*.
-
-Everything I build feeds into **[Hydrapulse](#-hydrapulse--my-red-team-automation-platform)** — my personal automation system engineered to hunt, exploit, and exfiltrate.
-
----
-
 ## 🛠️ Tech & Tooling
 
 **Primary Stack**  
