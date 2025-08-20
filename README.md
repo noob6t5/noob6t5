@@ -5,7 +5,10 @@
 ## 🛠️ Tech & Tooling
 
 **Primary Stack**  
-![Python](https://img.shields.io/badge/-Python-black?logo=python) ![JavaScript](https://img.shields.io/badge/-JavaScript-black?logo=javascript) ![Bash](https://img.shields.io/badge/-Bash-black?logo=gnu-bash) ![Go](https://img.shields.io/badge/-Go-black?logo=go)
+![Python](https://img.shields.io/badge/-Python-black?logo=python) 
+![Go](https://img.shields.io/badge/-Go-black?logo=go) 
+![Rust](https://img.shields.io/badge/-Rust-black?logo=rust) 
+![Solidity](https://img.shields.io/badge/-Solidity-black?logo=solidity)
 
 **Specialties**  
 ![Red Team](https://img.shields.io/badge/-Red%20Teaming-darkred) ![Fuzzing](https://img.shields.io/badge/-Fuzzing-red) ![LLM Bypass](https://img.shields.io/badge/-LLM%20Exploitation-darkgreen) ![Web3 Exploits](https://img.shields.io/badge/-Smart%20Contract%20Attacks-darkblue)
