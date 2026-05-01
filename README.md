@@ -1,57 +1,26 @@
-> 👾 Red Team Operator | Creator of Hydrapulse | Breaking Web2, Web3, and AI/ML with code
+# > System Breach & Logic Exploitation
 
 ---
 
-## 🛠️ Tech & Tooling
-
-**Primary Stack**  
-![Python](https://img.shields.io/badge/-Python-black?logo=python) 
-![Go](https://img.shields.io/badge/-Go-black?logo=go) 
-![Rust](https://img.shields.io/badge/-Rust-black?logo=rust) 
-![Solidity](https://img.shields.io/badge/-Solidity-black?logo=solidity)
-
-**Specialties**  
-![Red Team](https://img.shields.io/badge/-Red%20Teaming-darkred) ![Fuzzing](https://img.shields.io/badge/-Fuzzing-red) ![LLM Bypass](https://img.shields.io/badge/-LLM%20Exploitation-darkgreen) ![Web3 Exploits](https://img.shields.io/badge/-Smart%20Contract%20Attacks-darkblue)
+### **Execution Layer**
+* **Languages:**  `Go` | `C++` | `Solidity` | `Python`
+* **Environments:** EVM-compatible chains, Distributed Systems, LLM Inference Engines.
 
 ---
 
-## ⚔️ Hydrapulse — My Red Team Automation Platform
-
-> Multi-headed beast engineered for autonomous red teaming across three verticals.
-
-Hydrapulse isn’t just a toolkit — it’s a  war engine. Under active development.
-
-| Domain  | Hydra Head Name | Role Description                            | Directory Path    |
-| ------- | --------------- | ------------------------------------------- | ----------------- |
-| Web2    | `VENIN`         | Web attack automation, recon, injection     | `modules/venin/`  |
-| Web3    | `OBLIV`         | Smart contract abuse, DeFi exploit          | `modules/obliv/`  |
-| AI / ML | `PSYKHE`        | LLM fuzzing, prompt injections, logic break | `modules/psykhe/` |
+### **Vectors**
+* **Web3:** Researching protocol-level vulnerabilities, re-entrancy, and flash-loan logic flaws.
+* **AI/ML:** Adversarial testing, weights/tensor manipulation, and jailbreak automation.
+* **Low-Level:** Custom fuzzer development, memory safety analysis, and binary exploitation.
 
 ---
 
-## 🔥 Real-World Blood — Confirmed Hits
+### **Directives**
+> "Code is either a tool or a vulnerability, depending on who reads it first."
 
-- 🏴‍☠️ [SAP - ATO](https://www.sap.com/documents/2022/02/089613a0-167e-0010-bca6-c68f7e60039b.html) — Deep session chain led to full takeover  
-- 🛡️ [University of Texas - Critical Info Disclosure](https://security.utexas.edu/hall-of-fame) — Leaked sensitive data via auth misconfig  
-- 📬 [Substack - ATO](https://substack.com/hall-of-fame) — Account takeover through chained payload injection  
-- 🤖 **ACE in ML Model (Private)** — AI model pwned via deserialization + custom bypass chain
-
-> Dozens of hits went untracked on Bugcrowd/H1 and some from private org. From now on, *everything gets logged*.
+* **Focus:** Turning theoretical edge cases into reproducible exploits.
+* **Status:** Active in Red Teaming and Protocol Auditing.
 
 ---
 
-## 📈 Current Focus
-
-- 🧠 Exploiting LLMs and model APIs at scale
-- 🕸️ Expanding Web2 automation chains (Hydrapulse)
-- ⚙️ Modularizing my fuzzing infrastructure
-
----
-
-## 🧵 Stay Connected
-
-- 🐦 Twitter/X: [@noob6t5](https://twitter.com/noob6t5)
-- 💬 Always open to war-game ideas, collabs, and chaos
-
----
-
+**[Find Me here](https://twitter.com/noob6t5)**
