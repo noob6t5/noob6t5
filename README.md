@@ -33,6 +33,7 @@ Curated collection of responsible disclosures and recognized contributions.(I wi
 - **[Temporal Weakening of KL-Regularized Safety Constraints (Part-1 Continued)](https://zenodo.org/records/19236696)** — Formalization of the Temporal Exploitability Limit.
 - **[Detectability Limits of Deceptive Optimization under KL-Regularized Behavioral Constraints (Part 1)](https://zenodo.org/records/18485454)** — Research on deceptive alignment and detectability frontiers.
 - **[Breaking Symmetry in Autonomous Defensive Swarms Under Adversarial Pressure](https://zenodo.org/records/18146404)** — Simulation framework for swarm coordination and resilience.
+-  **[Semantic Retrieval Poisoning in Lightweight RAG Systems](https://zenodo.org/records/20356117)** — Experimental analysis of retrieval poisoning and downstream instruction propagation in TinyLlama-based RAG pipelines under constrained environments.
 
 ---
 
