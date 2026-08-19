@@ -9,7 +9,7 @@ I specialize in adversarial testing, deceptive alignment, protocol auditing, and
 ### **Directives**
 > "Code is either a tool or a vulnerability, depending on who reads it first."
 
-**Status**: Actively engaged in Red Teaming, AI Security Research, and responsible disclosure.
+**Status**: Actively engaged in Red Teaming, AI Security Research, and responsible disclosure. HAlted Hunting , Currently Spending Time in Learning Mathematics,Game Theory
 
 ---
 
