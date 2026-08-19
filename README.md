@@ -18,14 +18,14 @@ Curated collection of responsible disclosures and recognized contributions.(I wi
 
 ### 🎯 Documented Vulnerabilities & CVEs
 
-| Target / Vendor              | Vulnerability Type                          | Reference / Impact |
+| Target / Vendor | Vulnerability Type | Reference / Impact |
 |-----------------------------|---------------------------------------------|--------------------|
-| **Draw.io (jgraph/drawio)** | Data exfiltration & Stored XSS             | [CVE-2026-46642](https://github.com/jgraph/drawio/security/advisories/GHSA-fqhg-287p-c6vf) |
-| **SAP**                     | Account Takeover (ATO)                     | [Security Advisory](https://www.sap.com/documents/2022/02/089613a0-167e-0010-bca6-c68f7e60039b.html) |
-| **Substack**                | OAuth Account Takeover (ATO)               | [Substack Hall of Fame](https://substack.com/hall-of-fame) |
-| **University of Texas**     | Information Disclosure                     | [UT Austin Security HoF](https://security.utexas.edu/hall-of-fame) |
-| **Private Architecture**    | 2× Critical Vulnerabilities in Model Files | Responsible private disclosure |
-
+| **TechPSC** | Access-Control Bypass | [TechPSC Hall of Fame](https://techpsc.com/hall-of-fame/) |
+| **Draw.io (jgraph/drawio)** | Data exfiltration & Stored XSS | [CVE-2026-46642](https://github.com/jgraph/drawio/security/advisories/GHSA-fqhg-287p-c6vf) |
+| **SAP** | Account Takeover (ATO) | [Security Advisory](https://www.sap.com/documents/2022/02/089613a0-167e-0010-bca6-c68f7e60039b.html) |
+| **Substack** | OAuth Account Takeover (ATO) | [Substack Hall of Fame](https://substack.com/hall-of-fame) |
+| **University of Texas** | Information Disclosure | [UT Austin Security HoF](https://security.utexas.edu/hall-of-fame) |
+| **Private Architecture** | 2× Critical Vulnerabilities in Model Files | Responsible private disclosure |
 ---
 
 ## Featured Research Papers & Reports
