@@ -35,7 +35,7 @@
 
         h1 { font-size: 2.2rem; color: #fff; margin-bottom: 8px; }
         h2 { font-size: 1.5rem; color: var(--accent-blue); margin-top: 40px; border-bottom: 1px solid var(--border-color); padding-bottom: 8px; }
-        h3 { font-size: 1.2rem; margin: 0; color: #fff; }
+        h3 { font-size: 1.15rem; margin: 0; color: #fff; }
         
         .quote { font-style: italic; color: var(--text-muted); border-left: 3px solid var(--accent-blue); padding-left: 12px; margin: 16px 0; }
         
@@ -52,15 +52,16 @@
         @media (min-width: 768px) { .vuln-grid { grid-template-columns: 1fr 1fr; } }
 
         .card { background-color: var(--bg-card); border: 1px solid var(--border-color); border-radius: 6px; padding: 20px; }
-        .card p { margin: 8px 0 0 0; font-size: 0.95rem; color: var(--text-muted); }
         .vendor { color: var(--text-muted); font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
 
         /* Papers Section */
-        .paper-card { background-color: var(--bg-card); border: 1px solid var(--border-color); border-radius: 6px; padding: 24px; margin-bottom: 20px; }
-        .paper-header { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 12px; border-bottom: 1px solid rgba(48, 54, 61, 0.5); padding-bottom: 12px; margin-bottom: 12px; }
+        .paper-card { background-color: var(--bg-card); border: 1px solid var(--border-color); border-radius: 6px; padding: 20px; margin-bottom: 16px; }
+        .paper-header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
         .paper-meta { font-size: 0.85rem; color: var(--text-muted); display: flex; gap: 12px; align-items: center; margin-top: 4px; }
-        .paper-abstract { font-size: 0.95rem; color: var(--text-primary); text-align: justify; }
         
+        .paper-header a { color: #fff; text-decoration: none; }
+        .paper-header a:hover { color: var(--accent-blue); text-decoration: underline; }
+
         .links-section a { color: var(--accent-blue); text-decoration: none; margin-right: 20px; font-weight: 500; }
         .links-section a:hover { text-decoration: underline; }
     </style>
@@ -71,7 +72,7 @@
         <h1>👤 Sangharsha Upadhyaya</h1>
         <p style="font-size: 1.15rem; color: var(--text-muted); margin-top: 4px;">Security Researcher • AI/ML Red Teaming • AI Safety Research</p>
         <div class="quote">“Code is either a tool or a vulnerability, depending on who reads it first.”</div>
-        <p><strong>Status:</strong> Actively engaged in Red Teaming, AI Security Research, and responsible disclosure. Currently analyzing Mathematics and Game Theory dynamics.</p>
+        <p><strong>Status:</strong> Actively engaged in Red Teaming, AI Security Research, and responsible disclosure. HAlted Hunting, Currently Spending Time in Learning Mathematics, Game Theory.</p>
     </header>
 
     <h2>📝 Featured Research Papers & Reports</h2>
@@ -80,83 +81,124 @@
     <div class="paper-card">
         <div class="paper-header">
             <div>
-                <h3>AI Security and Game Theory: Modeling Adaptive Attacker Best Responses</h3>
+                <h3><a href="https://zenodo.org" target="_blank">AI Security and Game Theory: Modeling Adaptive Attacker Best Responses</a></h3>
                 <div class="paper-meta">
-                    <span><strong>Author:</strong> Upadhyaya, Sangharsha</span>
-                    <span>•</span>
                     <span>August 24, 2026</span>
+                    <span>•</span>
+                    <span class="badge badge-paper">Working Paper</span>
+                    <span class="badge badge-open">Open</span>
                 </div>
             </div>
-            <div>
-                <span class="badge badge-paper">Working Paper</span>
-                <span class="badge badge-open">Open</span>
-            </div>
         </div>
-        <p class="paper-abstract">Modern AI systems face diverse threat vectors, including prompt injection, tool abuse, and data exfiltration. Deploying a security defense alters the cost-benefit landscape for an attacker. If defenders fail to anticipate strategic best responses, predictable policies become primary targets. Game theory offers the rigorous incentive-based modeling required to design robust AI defenses.</p>
     </div>
 
     <!-- Paper 2 -->
     <div class="paper-card">
         <div class="paper-header">
             <div>
-                <h3>Semantic Retrieval Poisoning in Lightweight RAG Systems</h3>
+                <h3><a href="https://zenodo.org/records/20356117" target="_blank">Semantic Retrieval Poisoning in Lightweight RAG Systems</a></h3>
                 <div class="paper-meta">
-                    <span><strong>Author:</strong> Upadhyaya, Sangharsha</span>
-                    <span>•</span>
                     <span>May 23, 2026 (v1)</span>
+                    <span>•</span>
+                    <span class="badge badge-paper">Report</span>
+                    <span class="badge badge-open">Open</span>
                 </div>
             </div>
-            <div>
-                <span class="badge badge-paper">Report</span>
-                <span class="badge badge-open">Open</span>
-            </div>
         </div>
-        <p class="paper-abstract">Explores whether malicious documents can manipulate retrieval results in lightweight Retrieval-Augmented Generation (RAG) pipelines built with TinyLlama, ChromaDB, and sentence-transformer embeddings. The project evaluates how poisoned documents influence semantic retrieval rankings and whether retrieval compromise leads to downstream instruction hijacking. Experimental results showed that poisoned documents frequently achieved high retrieval rankings, but successful retrieval manipulation did not consistently produce malicious model behavior. The study highlights an important distinction between retrieval compromise and full behavioral compromise in resource-constrained language models. Rather than claiming complete system takeover, the work focuses on practical limitations, partial robustness, and measurable security boundaries within lightweight RAG architectures.</p>
     </div>
 
     <!-- Paper 3 -->
     <div class="paper-card">
         <div class="paper-header">
             <div>
-                <h3>Temporal Weakening of KL-Regularized Safety Constraints (Part-1 Continued)</h3>
+                <h3><a href="https://zenodo.org" target="_blank">Temporal Weakening of KL-Regularized Safety Constraints (Part-1 Continued)</a></h3>
                 <div class="paper-meta">
-                    <span><strong>Author:</strong> Upadhyaya, Sangharsha</span>
-                    <span>•</span>
                     <span>March 26, 2026 (v1)</span>
+                    <span>•</span>
+                    <span class="badge badge-paper">Report</span>
+                    <span class="badge badge-open">Open</span>
                 </div>
             </div>
-            <div>
-                <span class="badge badge-paper">Report</span>
-                <span class="badge badge-open">Open</span>
-            </div>
         </div>
-        <p class="paper-abstract">Formalization of the Temporal Exploitability Limit. We proved that safety constraints decay exponentially with monitoring lag. While Static Hiding allows an agent to stay under a KL limit while maximizing reward, Temporal Breakout maps what happens when the oversight limit isn't applied in real-time. We prove that under monitoring delay &Delta;t, constant defensive pressure evaporates mathematically, turning into a "Future Debt" that the agent can temporarily ignore. This establishes a mathematical "Blind Spot" window where the agent operates at 100% deception while the supervisor observes 0 deviation.</p>
     </div>
 
     <!-- Paper 4 -->
     <div class="paper-card">
         <div class="paper-header">
             <div>
-                <h3>Detectability Limits of Deceptive Optimization under KL-Regularized Behavioral Constraints (Part 1)</h3>
+                <h3><a href="https://zenodo.org" target="_blank">Detectability Limits of Deceptive Optimization under KL-Regularized Behavioral Constraints (Part 1)</a></h3>
                 <div class="paper-meta">
-                    <span><strong>Author:</strong> Upadhyaya, Sangharsha</span>
-                    <span>•</span>
                     <span>February 4, 2026 (v1)</span>
+                    <span>•</span>
+                    <span class="badge badge-paper">Report</span>
+                    <span class="badge badge-open">Open</span>
                 </div>
             </div>
-            <div>
-                <span class="badge badge-paper">Report</span>
-                <span class="badge badge-open">Open</span>
-            </div>
         </div>
-        <p class="paper-abstract">A formal study of deceptive alignment in Reinforcement Learning (RL), where an agent optimizes a hidden objective while remaining statistically close to a safe baseline policy. The study reveals a smooth tradeoff between hidden reward maximization and detectability, demonstrating that even minimal allowances in KL divergence enable improved hidden objective performance. Gradient-based simulations confirm convergence to the theoretical solution, establishing a foundational framework for understanding deception as constrained optimal control rather than simple distributional anomalies. Includes Python code for reproducing simulations and scaling law observations.</p>
     </div>
 
     <!-- Paper 5 -->
     <div class="paper-card">
         <div class="paper-header">
             <div>
-                <h3>Breaking Symmetry in Autonomous Defensive Swarms Under Adversarial Pressure: A Decision-Layer Autonomy Model</h3>
+                <h3><a href="https://zenodo.org" target="_blank">Breaking Symmetry in Autonomous Defensive Swarms Under Adversarial Pressure: A Decision-Layer Autonomy Model</a></h3>
                 <div class="paper-meta">
-                    <span><strong>Author:</strong> Upadhyaya, Sangharsha</span>
+                    <span>January 4, 2026 (v2)</span>
                     <span>•</span>
+                    <span class="badge badge-paper">Report</span>
+                    <span class="badge badge-open">Open</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h2>🏆 Hall of Fame & Vulnerability Disclosures</h2>
+    <div class="vuln-grid">
+        <div class="card">
+            <div class="vendor">TechPSC</div>
+            <div style="display:flex; justify-content:space-between; align-items:center; width:100%;">
+                <span style="font-weight:600; color:#fff; flex-grow:1;">Access-Control Bypass & Mass PII Leak</span>
+                <span class="badge badge-hof">TechPSC HoF</span>
+            </div>
+        </div>
+        <div class="card">
+            <div class="vendor">Draw.io (jgraph/drawio)</div>
+            <div style="display:flex; justify-content:space-between; align-items:center; width:100%;">
+                <span style="font-weight:600; color:#fff; flex-grow:1;">Data exfiltration & Stored XSS</span>
+                <span class="badge badge-cve">CVE-2026-46642</span>
+            </div>
+        </div>
+        <div class="card">
+            <div class="vendor">SAP</div>
+            <div style="display:flex; justify-content:space-between; align-items:center; width:100%;">
+                <span style="font-weight:600; color:#fff; flex-grow:1;">Account Takeover (ATO)</span>
+                <span class="badge badge-hof">Security Advisory</span>
+            </div>
+        </div>
+        <div class="card">
+            <div class="vendor">Substack</div>
+            <div style="display:flex; justify-content:space-between; align-items:center; width:100%;">
+                <span style="font-weight:600; color:#fff; flex-grow:1;">OAuth Account Takeover (ATO)</span>
+                <span class="badge badge-hof">Substack HoF</span>
+            </div>
+        </div>
+        <div class="card">
+            <div class="vendor">University of Texas</div>
+            <div style="display:flex; justify-content:space-between; align-items:center; width:100%;">
+                <span style="font-weight:600; color:#fff; flex-grow:1;">Information Disclosure</span>
+                <span class="badge badge-hof">UT Austin HoF</span>
+            </div>
+        </div>
+        <div class="card">
+            <div class="vendor">Huntr model</div>
+            <div style="display:flex; justify-content:space-between; align-items:center; width:100%;">
+                <span style="font-weight:600; color:#fff; flex-grow:1;">2× Critical Vulnerabilities in Model Files</span>
+                <span class="badge badge-priv">Private Disclosure</span>
+            </div>
+        </div>
+    </div>
+
+    <h2>🔗 Find Me On</h2>
+    <div class="links-section" style="margin-bottom: 60px;">
+        <a href="https://github.com" target="_blank">GitHub</a>
+        <a href="https://x.com" target="_blank">X / Twitter</a>
