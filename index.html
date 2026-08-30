@@ -2,7 +2,6 @@
 
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -17,37 +16,40 @@ content="Sangharsha Upadhyaya — Security Researcher working across AI Security
 <style>
 
 /* =========================================================
-   DESIGN SYSTEM
+   WARM DARK RESEARCH THEME
 ========================================================= */
 
 :root {
 
-    --bg: #f4f3ef;
-    --bg-alt: #ebeae5;
-    --paper: #faf9f6;
+    --bg: #0f1011;
+    --bg-2: #131516;
+    --surface: #181a1c;
+    --surface-2: #1d2022;
+    --surface-hover: #222527;
 
-    --text: #171717;
-    --text-soft: #3f4144;
-    --muted: #777a7d;
-    --dim: #a1a3a5;
+    --text: #e8e3d9;
+    --text-soft: #b6b2aa;
+    --muted: #85857f;
+    --dim: #555854;
 
-    --line: #d8d7d2;
-    --line-dark: #c7c6c0;
+    --line: rgba(232,227,217,.10);
+    --line-strong: rgba(232,227,217,.16);
 
-    --red: #c93628;
-    --red-soft: #f4ddd9;
+    --red: #d95745;
+    --red-soft: rgba(217,87,69,.10);
 
-    --green: #28764c;
-    --green-soft: #dcebe2;
+    --amber: #c99a55;
+    --amber-soft: rgba(201,154,85,.10);
 
-    --blue: #315f9d;
+    --green: #72ad83;
+    --green-soft: rgba(114,173,131,.10);
 
-    --mono:
-        "SFMono-Regular",
-        "Cascadia Code",
-        "Roboto Mono",
-        Consolas,
-        monospace;
+    --blue: #7c9fc9;
+
+    --serif:
+        Georgia,
+        "Times New Roman",
+        serif;
 
     --sans:
         Inter,
@@ -57,10 +59,12 @@ content="Sangharsha Upadhyaya — Security Researcher working across AI Security
         "Segoe UI",
         sans-serif;
 
-    --serif:
-        Georgia,
-        "Times New Roman",
-        serif;
+    --mono:
+        "SFMono-Regular",
+        "Cascadia Code",
+        "Roboto Mono",
+        Consolas,
+        monospace;
 }
 
 
@@ -81,9 +85,15 @@ body {
     margin: 0;
 
     background:
-        linear-gradient(
-            rgba(255,255,255,.45),
-            rgba(255,255,255,.45)
+        radial-gradient(
+            circle at 80% 0%,
+            rgba(201,154,85,.055),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 0% 30%,
+            rgba(217,87,69,.035),
+            transparent 30%
         ),
         var(--bg);
 
@@ -98,7 +108,7 @@ body {
 
 
 /* =========================================================
-   SUBTLE PAPER GRID
+   TECHNICAL BACKGROUND GRID
 ========================================================= */
 
 body::before {
@@ -111,57 +121,56 @@ body::before {
 
     pointer-events: none;
 
-    opacity: .28;
+    opacity: .25;
 
     background-image:
 
         linear-gradient(
-            rgba(0,0,0,.025) 1px,
+            rgba(232,227,217,.025) 1px,
             transparent 1px
         ),
 
         linear-gradient(
             90deg,
-            rgba(0,0,0,.025) 1px,
+            rgba(232,227,217,.025) 1px,
             transparent 1px
         );
 
-    background-size: 42px 42px;
+    background-size:
+        46px 46px;
 
     mask-image:
         linear-gradient(
             to bottom,
             black,
-            transparent 80%
+            transparent 82%
         );
 }
 
 
 /* =========================================================
-   GLOBAL
+   CONTAINER
 ========================================================= */
 
 .container {
 
-    width: min(
-        1080px,
-        calc(100% - 42px)
-    );
+    width:
+        min(
+            1080px,
+            calc(100% - 42px)
+        );
 
-    margin: auto;
+    margin:
+        0 auto;
 }
 
 main {
     position: relative;
 }
 
-a {
-    color: inherit;
-}
-
 
 /* =========================================================
-   TOP BAR
+   TOP NAVIGATION
 ========================================================= */
 
 .topbar {
@@ -186,13 +195,13 @@ a {
 
     gap: 11px;
 
+    color: var(--text-soft);
+
     font-family: var(--mono);
 
     font-size: 10px;
 
-    letter-spacing: .09em;
-
-    color: var(--text-soft);
+    letter-spacing: .10em;
 }
 
 .identity-mark {
@@ -202,20 +211,23 @@ a {
 
     background: var(--red);
 
-    transform: rotate(45deg);
+    transform:
+        rotate(45deg);
 
     box-shadow:
-        0 0 0 3px var(--red-soft);
+        0 0 14px rgba(217,87,69,.35);
 }
 
 .top-nav {
 
     display: flex;
 
-    gap: 24px;
+    gap: 25px;
 }
 
 .top-nav a {
+
+    color: var(--muted);
 
     text-decoration: none;
 
@@ -225,15 +237,14 @@ a {
 
     text-transform: uppercase;
 
-    letter-spacing: .1em;
+    letter-spacing: .11em;
 
-    color: var(--muted);
-
-    transition: color .2s ease;
+    transition:
+        color .2s ease;
 }
 
 .top-nav a:hover {
-    color: var(--red);
+    color: var(--amber);
 }
 
 
@@ -243,22 +254,28 @@ a {
 
 .hero {
 
-    min-height: 540px;
+    min-height:
+        530px;
 
     display: grid;
 
     grid-template-columns:
-        minmax(0, 1.5fr)
-        minmax(220px, .6fr);
+        minmax(0, 1.45fr)
+        minmax(230px, .55fr);
 
     align-items: center;
 
-    gap: 70px;
+    gap: 75px;
 
-    padding: 82px 0 90px;
+    padding:
+        78px 0 88px;
 }
 
 .hero-kicker {
+
+    margin-bottom: 21px;
+
+    color: var(--red);
 
     font-family: var(--mono);
 
@@ -266,73 +283,88 @@ a {
 
     text-transform: uppercase;
 
-    letter-spacing: .17em;
-
-    color: var(--red);
-
-    margin-bottom: 20px;
+    letter-spacing: .18em;
 }
 
 .hero-kicker::before {
 
-    content: "/// ";
+    content:
+        "/// ";
 
-    color: var(--dim);
+    color:
+        var(--dim);
 }
 
 .hero h1 {
 
     margin: 0;
 
-    font-family: var(--serif);
+    font-family:
+        var(--serif);
 
     font-size:
         clamp(
-            46px,
-            6.3vw,
-            76px
+            48px,
+            6.5vw,
+            78px
         );
 
-    line-height: .95;
+    font-weight:
+        400;
 
-    font-weight: 400;
+    letter-spacing:
+        -.055em;
 
-    letter-spacing: -.045em;
+    line-height:
+        .93;
 }
 
 .hero h1 span {
-    color: var(--muted);
+
+    color:
+        var(--muted);
 }
 
 .hero-description {
 
-    max-width: 620px;
+    max-width:
+        625px;
 
-    margin-top: 28px;
+    margin:
+        28px 0 0;
 
-    color: var(--text-soft);
+    color:
+        var(--text-soft);
 
-    font-size: 14px;
+    font-size:
+        14px;
 
-    line-height: 1.75;
+    line-height:
+        1.8;
 }
 
 .hero-description strong {
 
-    color: var(--text);
+    color:
+        var(--text);
 
-    font-weight: 600;
+    font-weight:
+        600;
 }
 
 .hero-meta {
 
-    display: flex;
+    display:
+        flex;
 
-    flex-wrap: wrap;
+    flex-wrap:
+        wrap;
 
-    gap: 7px;
+    gap:
+        7px;
 
-    margin-top: 28px;
+    margin-top:
+        28px;
 }
 
 .meta {
@@ -344,25 +376,31 @@ a {
         1px solid var(--line);
 
     background:
-        rgba(255,255,255,.45);
+        rgba(255,255,255,.015);
 
-    color: var(--muted);
+    color:
+        var(--muted);
 
-    font-family: var(--mono);
+    font-family:
+        var(--mono);
 
-    font-size: 8px;
+    font-size:
+        8px;
 
-    text-transform: uppercase;
+    text-transform:
+        uppercase;
 
-    letter-spacing: .07em;
+    letter-spacing:
+        .07em;
 }
 
 .meta.active {
 
-    color: var(--green);
+    color:
+        var(--green);
 
     border-color:
-        #b9d5c3;
+        rgba(114,173,131,.28);
 
     background:
         var(--green-soft);
@@ -370,77 +408,102 @@ a {
 
 
 /* =========================================================
-   HERO SIDE
+   HERO SIDE PANEL
 ========================================================= */
 
 .hero-side {
 
     border-left:
-        1px solid var(--line);
+        1px solid var(--line-strong);
 
-    padding-left: 28px;
+    padding-left:
+        30px;
 
-    font-family: var(--mono);
+    font-family:
+        var(--mono);
 }
 
 .side-label {
 
-    color: var(--dim);
+    margin-bottom:
+        7px;
 
-    font-size: 8px;
+    color:
+        var(--dim);
 
-    text-transform: uppercase;
+    font-size:
+        8px;
 
-    letter-spacing: .14em;
+    text-transform:
+        uppercase;
 
-    margin-bottom: 7px;
+    letter-spacing:
+        .14em;
 }
 
 .side-value {
 
-    color: var(--text);
+    margin-bottom:
+        25px;
 
-    font-size: 12px;
+    color:
+        var(--text);
 
-    margin-bottom: 24px;
+    font-size:
+        12px;
 }
 
 .side-value.red {
-    color: var(--red);
+    color:
+        var(--red);
 }
 
 .side-line {
 
-    height: 1px;
+    height:
+        1px;
+
+    margin:
+        20px 0;
 
     background:
         var(--line);
-
-    margin: 20px 0;
 }
 
 .signal {
 
-    display: flex;
+    display:
+        flex;
 
-    align-items: center;
+    align-items:
+        center;
 
-    gap: 8px;
+    gap:
+        8px;
 
-    color: var(--green);
+    color:
+        var(--green);
 
-    font-size: 9px;
+    font-size:
+        9px;
 }
 
 .signal-dot {
 
-    width: 5px;
-    height: 5px;
+    width:
+        5px;
 
-    border-radius: 50%;
+    height:
+        5px;
+
+    border-radius:
+        50%;
 
     background:
         var(--green);
+
+    box-shadow:
+        0 0 10px rgba(114,173,131,.5);
 }
 
 
@@ -450,7 +513,8 @@ a {
 
 section {
 
-    padding: 72px 0;
+    padding:
+        72px 0;
 
     border-top:
         1px solid var(--line);
@@ -458,63 +522,83 @@ section {
 
 .section-heading {
 
-    display: grid;
+    display:
+        grid;
 
-    grid-template-columns: 145px 1fr;
+    grid-template-columns:
+        145px 1fr;
 
-    gap: 35px;
+    gap:
+        35px;
 
-    margin-bottom: 40px;
+    margin-bottom:
+        40px;
 }
 
 .section-index {
 
-    font-family: var(--mono);
+    color:
+        var(--red);
 
-    font-size: 9px;
+    font-family:
+        var(--mono);
 
-    color: var(--red);
+    font-size:
+        9px;
 
-    letter-spacing: .12em;
+    letter-spacing:
+        .12em;
 }
 
 .section-title {
 
-    margin: 0;
+    margin:
+        0;
 
-    font-family: var(--serif);
+    color:
+        var(--text);
 
-    font-weight: 400;
+    font-family:
+        var(--serif);
 
     font-size:
         clamp(
-            31px,
+            32px,
             4vw,
-            44px
+            45px
         );
 
-    letter-spacing: -.035em;
+    font-weight:
+        400;
 
-    line-height: 1;
+    letter-spacing:
+        -.04em;
+
+    line-height:
+        1;
 }
 
 .section-description {
 
-    max-width: 600px;
+    max-width:
+        620px;
 
     margin:
         13px 0 0;
 
-    color: var(--muted);
+    color:
+        var(--muted);
 
-    font-size: 12px;
+    font-size:
+        12px;
 
-    line-height: 1.7;
+    line-height:
+        1.75;
 }
 
 
 /* =========================================================
-   RESEARCH LIST
+   RESEARCH
 ========================================================= */
 
 .research-list {
@@ -525,14 +609,16 @@ section {
 
 .research-item {
 
-    display: grid;
+    display:
+        grid;
 
     grid-template-columns:
         58px
-        minmax(0, 1fr)
-        100px;
+        minmax(0,1fr)
+        90px;
 
-    gap: 20px;
+    gap:
+        20px;
 
     padding:
         24px 0;
@@ -540,7 +626,11 @@ section {
     border-bottom:
         1px solid var(--line);
 
-    text-decoration: none;
+    color:
+        inherit;
+
+    text-decoration:
+        none;
 
     transition:
         background .2s ease,
@@ -549,73 +639,101 @@ section {
 
 .research-item:hover {
 
-    background:
-        rgba(255,255,255,.55);
+    padding-left:
+        8px;
 
-    padding-left: 8px;
+    background:
+        rgba(255,255,255,.018);
 }
 
 .research-number {
 
-    font-family: var(--mono);
+    color:
+        var(--dim);
 
-    color: var(--dim);
+    font-family:
+        var(--mono);
 
-    font-size: 9px;
+    font-size:
+        9px;
 }
 
 .research-title {
 
-    max-width: 700px;
+    max-width:
+        730px;
 
-    font-family: var(--serif);
+    color:
+        var(--text);
 
-    font-size: 19px;
+    font-family:
+        var(--serif);
 
-    line-height: 1.25;
+    font-size:
+        19px;
+
+    line-height:
+        1.28;
 }
 
 .research-meta {
 
-    display: flex;
+    display:
+        flex;
 
-    flex-wrap: wrap;
+    flex-wrap:
+        wrap;
 
-    gap: 8px;
+    gap:
+        8px;
 
-    margin-top: 8px;
+    margin-top:
+        8px;
 
-    font-family: var(--mono);
+    color:
+        var(--muted);
 
-    font-size: 8px;
+    font-family:
+        var(--mono);
 
-    color: var(--muted);
+    font-size:
+        8px;
 
-    text-transform: uppercase;
+    text-transform:
+        uppercase;
 
-    letter-spacing: .06em;
+    letter-spacing:
+        .06em;
 }
 
 .research-status {
 
-    justify-self: end;
+    justify-self:
+        end;
 
-    align-self: start;
+    align-self:
+        start;
 
-    font-family: var(--mono);
+    color:
+        var(--green);
 
-    font-size: 8px;
+    font-family:
+        var(--mono);
 
-    color: var(--green);
+    font-size:
+        8px;
 
-    text-transform: uppercase;
+    text-transform:
+        uppercase;
 
-    letter-spacing: .08em;
+    letter-spacing:
+        .08em;
 }
 
 .research-status::before {
 
-    content: "● ";
+    content:
+        "● ";
 
 }
 
@@ -626,10 +744,11 @@ section {
 
 .disclosure-grid {
 
-    display: grid;
+    display:
+        grid;
 
     grid-template-columns:
-        repeat(2, 1fr);
+        repeat(2,1fr);
 
     border-top:
         1px solid var(--line);
@@ -640,11 +759,14 @@ section {
 
 .disclosure {
 
-    min-height: 170px;
+    min-height:
+        175px;
 
-    padding: 23px;
+    position:
+        relative;
 
-    position: relative;
+    padding:
+        23px;
 
     border-right:
         1px solid var(--line);
@@ -653,73 +775,100 @@ section {
         1px solid var(--line);
 
     background:
-        rgba(255,255,255,.24);
+        rgba(255,255,255,.012);
 
     transition:
-        background .2s ease;
+        background .2s ease,
+        transform .2s ease;
 }
 
 .disclosure:hover {
 
     background:
-        var(--paper);
+        var(--surface);
+
+    transform:
+        translateY(-2px);
 }
 
 .disclosure-number {
 
-    margin-bottom: 25px;
+    margin-bottom:
+        25px;
 
-    font-family: var(--mono);
+    color:
+        var(--dim);
 
-    color: var(--dim);
+    font-family:
+        var(--mono);
 
-    font-size: 8px;
+    font-size:
+        8px;
 }
 
 .disclosure-vendor {
 
-    margin-bottom: 6px;
+    margin-bottom:
+        6px;
 
-    font-family: var(--mono);
+    color:
+        var(--red);
 
-    color: var(--red);
+    font-family:
+        var(--mono);
 
-    font-size: 8px;
+    font-size:
+        8px;
 
-    text-transform: uppercase;
+    text-transform:
+        uppercase;
 
-    letter-spacing: .12em;
+    letter-spacing:
+        .12em;
 }
 
 .disclosure-title {
 
-    max-width: 390px;
+    max-width:
+        390px;
 
-    font-family: var(--serif);
+    color:
+        var(--text);
 
-    font-size: 19px;
+    font-family:
+        var(--serif);
 
-    line-height: 1.2;
+    font-size:
+        19px;
+
+    line-height:
+        1.22;
 }
 
 
 /* =========================================================
-   CASE LINK
+   SMALL CASE LINKS
 ========================================================= */
 
 .case-link {
 
-    position: absolute;
+    position:
+        absolute;
 
-    right: 22px;
+    right:
+        21px;
 
-    bottom: 20px;
+    bottom:
+        19px;
 
-    display: inline-flex;
+    display:
+        inline-flex;
 
-    align-items: center;
+    align-items:
+        center;
 
-    gap: 5px;
+    gap:
+        5px;
 
     padding:
         5px 7px;
@@ -728,19 +877,25 @@ section {
         1px solid var(--line);
 
     background:
-        rgba(255,255,255,.55);
+        rgba(255,255,255,.025);
 
-    color: var(--muted);
+    color:
+        var(--muted);
 
-    text-decoration: none;
+    text-decoration:
+        none;
 
-    font-family: var(--mono);
+    font-family:
+        var(--mono);
 
-    font-size: 8px;
+    font-size:
+        8px;
 
-    text-transform: uppercase;
+    text-transform:
+        uppercase;
 
-    letter-spacing: .06em;
+    letter-spacing:
+        .05em;
 
     transition:
         color .2s ease,
@@ -750,26 +905,28 @@ section {
 
 .case-link:hover {
 
-    color: var(--red);
+    color:
+        var(--amber);
 
     border-color:
-        #d7aaa4;
+        rgba(201,154,85,.35);
 
     background:
-        var(--red-soft);
+        var(--amber-soft);
 }
 
 
 /* =========================================================
-   RESEARCH AREAS
+   CURRENT AREAS
 ========================================================= */
 
 .areas {
 
-    display: grid;
+    display:
+        grid;
 
     grid-template-columns:
-        repeat(4, 1fr);
+        repeat(4,1fr);
 
     border-top:
         1px solid var(--line);
@@ -780,9 +937,11 @@ section {
 
 .area {
 
-    min-height: 135px;
+    min-height:
+        135px;
 
-    padding: 22px;
+    padding:
+        22px;
 
     border-right:
         1px solid var(--line);
@@ -791,7 +950,7 @@ section {
         1px solid var(--line);
 
     background:
-        rgba(255,255,255,.2);
+        rgba(255,255,255,.012);
 
     transition:
         background .2s ease;
@@ -800,16 +959,19 @@ section {
 .area:hover {
 
     background:
-        var(--paper);
+        var(--surface);
 }
 
 .area-number {
 
-    font-family: var(--mono);
+    color:
+        var(--dim);
 
-    color: var(--dim);
+    font-family:
+        var(--mono);
 
-    font-size: 8px;
+    font-size:
+        8px;
 }
 
 .area h3 {
@@ -817,11 +979,17 @@ section {
     margin:
         28px 0 0;
 
-    font-family: var(--serif);
+    color:
+        var(--text);
 
-    font-weight: 400;
+    font-family:
+        var(--serif);
 
-    font-size: 19px;
+    font-size:
+        19px;
+
+    font-weight:
+        400;
 }
 
 
@@ -831,47 +999,63 @@ section {
 
 .contact {
 
-    display: grid;
+    display:
+        grid;
 
     grid-template-columns:
         1fr 1fr;
 
-    gap: 70px;
+    gap:
+        70px;
 
-    align-items: end;
+    align-items:
+        end;
 }
 
 .contact h2 {
 
-    margin: 0;
+    margin:
+        0;
 
-    font-family: var(--serif);
+    color:
+        var(--text);
+
+    font-family:
+        var(--serif);
 
     font-size:
         clamp(
-            38px,
+            40px,
             5vw,
             58px
         );
 
-    font-weight: 400;
+    font-weight:
+        400;
 
-    letter-spacing: -.045em;
+    letter-spacing:
+        -.05em;
 
-    line-height: .95;
+    line-height:
+        .95;
 }
 
 .contact-copy {
 
-    max-width: 430px;
+    max-width:
+        440px;
 
-    margin-top: 18px;
+    margin:
+        18px 0 0;
 
-    color: var(--muted);
+    color:
+        var(--muted);
 
-    font-size: 12px;
+    font-size:
+        12px;
 
-    line-height: 1.7;
+    line-height:
+        1.75;
 }
 
 .links {
@@ -882,9 +1066,11 @@ section {
 
 .link {
 
-    display: flex;
+    display:
+        flex;
 
-    justify-content: space-between;
+    justify-content:
+        space-between;
 
     padding:
         14px 0;
@@ -892,25 +1078,38 @@ section {
     border-bottom:
         1px solid var(--line);
 
-    text-decoration: none;
+    color:
+        var(--text-soft);
 
-    font-family: var(--mono);
+    text-decoration:
+        none;
 
-    font-size: 9px;
+    font-family:
+        var(--mono);
 
-    text-transform: uppercase;
+    font-size:
+        9px;
 
-    letter-spacing: .07em;
+    text-transform:
+        uppercase;
+
+    letter-spacing:
+        .07em;
+
+    transition:
+        color .2s ease;
 }
 
 .link span:last-child {
 
-    color: var(--dim);
+    color:
+        var(--dim);
 }
 
 .link:hover {
 
-    color: var(--red);
+    color:
+        var(--amber);
 }
 
 
@@ -920,25 +1119,32 @@ section {
 
 footer {
 
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
     padding:
         28px 0 42px;
-
-    display: flex;
-
-    justify-content: space-between;
 
     border-top:
         1px solid var(--line);
 
-    color: var(--dim);
+    color:
+        var(--dim);
 
-    font-family: var(--mono);
+    font-family:
+        var(--mono);
 
-    font-size: 8px;
+    font-size:
+        8px;
 
-    text-transform: uppercase;
+    text-transform:
+        uppercase;
 
-    letter-spacing: .09em;
+    letter-spacing:
+        .09em;
 }
 
 
@@ -951,29 +1157,31 @@ footer {
     .container {
 
         width:
-            min(
-                calc(100% - 28px),
-                1080px
-            );
+            calc(100% - 28px);
     }
 
     .topbar {
 
-        height: 60px;
+        height:
+            60px;
     }
 
     .top-nav {
 
-        display: none;
+        display:
+            none;
     }
 
     .hero {
 
-        grid-template-columns: 1fr;
+        min-height:
+            auto;
 
-        min-height: auto;
+        grid-template-columns:
+            1fr;
 
-        gap: 45px;
+        gap:
+            45px;
 
         padding:
             65px 0 70px;
@@ -981,49 +1189,56 @@ footer {
 
     .hero-side {
 
-        border-left: 0;
+        display:
+            grid;
+
+        grid-template-columns:
+            1fr 1fr;
+
+        gap:
+            15px;
+
+        border-left:
+            0;
 
         border-top:
             1px solid var(--line);
 
         padding:
             22px 0 0;
-
-        display: grid;
-
-        grid-template-columns:
-            1fr 1fr;
-
-        gap: 15px;
     }
 
     .side-line {
 
-        display: none;
+        display:
+            none;
     }
 
     .section-heading {
 
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            1fr;
 
-        gap: 12px;
+        gap:
+            12px;
     }
 
     .research-item {
 
         grid-template-columns:
-            35px
-            1fr;
+            35px 1fr;
     }
 
     .research-status {
 
-        display: none;
+        display:
+            none;
     }
 
     .disclosure-grid {
 
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            1fr;
     }
 
     .areas {
@@ -1034,16 +1249,20 @@ footer {
 
     .contact {
 
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            1fr;
 
-        gap: 45px;
+        gap:
+            45px;
     }
 
     footer {
 
-        flex-direction: column;
+        flex-direction:
+            column;
 
-        gap: 8px;
+        gap:
+            8px;
     }
 }
 
@@ -1052,32 +1271,38 @@ footer {
 
     .hero h1 {
 
-        font-size: 49px;
+        font-size:
+            49px;
     }
 
     .hero-description {
 
-        font-size: 13px;
+        font-size:
+            13px;
     }
 
     .hero-side {
 
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            1fr;
     }
 
     .areas {
 
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            1fr;
     }
 
     .research-title {
 
-        font-size: 17px;
+        font-size:
+            17px;
     }
 
     .disclosure-title {
 
-        font-size: 18px;
+        font-size:
+            18px;
     }
 }
 
@@ -1090,12 +1315,12 @@ footer {
 <div class="container">
 
 <!-- =====================================================
-     NAVIGATION
+     TOP BAR
 ====================================================== -->
 
 <header class="topbar">
 
-```
+
 <div class="identity">
 
     <span class="identity-mark"></span>
@@ -1126,7 +1351,7 @@ footer {
     </a>
 
 </nav>
-```
+
 
 </header>
 
@@ -1141,7 +1366,7 @@ footer {
     style="border-top:0;"
 >
 
-```
+
 <div>
 
     <div class="hero-kicker">
@@ -1201,6 +1426,9 @@ footer {
 
 </div>
 
+
+
+<!-- HERO SIDE -->
 
 <aside class="hero-side">
 
@@ -1264,7 +1492,7 @@ footer {
 
 
 </aside>
-```
+
 
 </section>
 
@@ -1274,7 +1502,7 @@ footer {
 
 <section id="research">
 
-```
+
 <div class="section-heading">
 
 
@@ -1301,7 +1529,6 @@ footer {
 
     </div>
 
-
 </div>
 
 
@@ -1309,7 +1536,7 @@ footer {
 <div class="research-list">
 
 
-    <!-- PAPER 001 -->
+    <!-- 001 -->
 
     <a
         class="research-item"
@@ -1358,7 +1585,7 @@ footer {
 
 
 
-    <!-- PAPER 002 -->
+    <!-- 002 -->
 
     <a
         class="research-item"
@@ -1413,7 +1640,7 @@ footer {
 
 
 
-    <!-- PAPER 003 -->
+    <!-- 003 -->
 
     <a
         class="research-item"
@@ -1468,7 +1695,7 @@ footer {
 
 
 
-    <!-- PAPER 004 -->
+    <!-- 004 -->
 
     <a
         class="research-item"
@@ -1524,7 +1751,7 @@ footer {
 
 
 
-    <!-- PAPER 005 -->
+    <!-- 005 -->
 
     <a
         class="research-item"
@@ -1579,7 +1806,7 @@ footer {
 
 
 </div>
-```
+
 
 </section>
 
@@ -1589,7 +1816,7 @@ footer {
 
 <section id="disclosures">
 
-```
+
 <div class="section-heading">
 
 
@@ -1614,7 +1841,6 @@ footer {
         </p>
 
     </div>
-
 
 </div>
 
@@ -1651,7 +1877,9 @@ footer {
             target="_blank"
             rel="noopener"
         >
+
             Hall of Fame ↗
+
         </a>
 
     </article>
@@ -1686,7 +1914,9 @@ footer {
             target="_blank"
             rel="noopener"
         >
+
             CVE-2026-46642 ↗
+
         </a>
 
     </article>
@@ -1721,7 +1951,9 @@ footer {
             target="_blank"
             rel="noopener"
         >
+
             Security Advisory ↗
+
         </a>
 
     </article>
@@ -1756,14 +1988,16 @@ footer {
             target="_blank"
             rel="noopener"
         >
+
             Hall of Fame ↗
+
         </a>
 
     </article>
 
 
 
-    <!-- UT AUSTIN -->
+    <!-- UNIVERSITY OF TEXAS -->
 
     <article class="disclosure">
 
@@ -1791,7 +2025,9 @@ footer {
             target="_blank"
             rel="noopener"
         >
+
             UT Austin HoF ↗
+
         </a>
 
     </article>
@@ -1820,28 +2056,25 @@ footer {
         </div>
 
 
-        <span
-            class="case-link"
-            style="cursor:default;"
-        >
+        <span class="case-link">
+
             Private Disclosure
+
         </span>
 
     </article>
 
 
 </div>
-```
+
 
 </section>
 
 <!-- =====================================================
-     CURRENT AREAS
+     FOCUS
 ====================================================== -->
 
 <section id="areas">
-
-```
 <div class="section-heading">
 
 
@@ -1865,7 +2098,6 @@ footer {
         </p>
 
     </div>
-
 
 </div>
 
@@ -1927,17 +2159,14 @@ footer {
 
 
 </div>
-```
+
 
 </section>
 
-<!-- =====================================================
-     CONTACT
-====================================================== -->
 
 <section id="contact">
 
-```
+
 <div class="contact">
 
 
@@ -2003,7 +2232,7 @@ footer {
 
         <a
             class="link"
-            href="https://zenodo.org/"
+            href="https://zenodo.org/search?q=metadata.creators.person_or_org.name:%22Upadhyaya,+Sangharsha%22"
             target="_blank"
             rel="noopener"
         >
@@ -2022,7 +2251,7 @@ footer {
     </div>
 
 </div>
-```
+
 
 </section>
 
@@ -2034,7 +2263,7 @@ footer {
 
 <footer>
 
-```
+
 <span>
     NOOB6T5 / SANGHARSHA UPADHYAYA
 </span>
@@ -2042,7 +2271,7 @@ footer {
 <span>
     SECURITY RESEARCH · 2026
 </span>
-```
+
 
 </footer>
 
