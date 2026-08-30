@@ -2,53 +2,67 @@
 
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Sangharsha Upadhyaya — Security Research</title>
 
-<meta name="description"
-   content="Sangharsha Upadhyaya — Security Researcher working across AI security, adversarial ML, application security and game theory.">
+<meta
+name="description"
+content="Sangharsha Upadhyaya — Security Researcher working across AI Security, Adversarial ML, Application Security and Game Theory."
+
+>
 
 <style>
+
 /* =========================================================
-   CORE
+   DESIGN SYSTEM
 ========================================================= */
 
 :root {
-    --bg: #08090b;
-    --bg-soft: #0d0f12;
-    --panel: #111419;
-    --panel-2: #15181d;
 
-    --text: #e8e8e3;
-    --muted: #858a92;
-    --dim: #555b64;
+    --bg: #f4f3ef;
+    --bg-alt: #ebeae5;
+    --paper: #faf9f6;
 
-    --line: rgba(255,255,255,.09);
+    --text: #171717;
+    --text-soft: #3f4144;
+    --muted: #777a7d;
+    --dim: #a1a3a5;
 
-    --red: #ff4d3d;
-    --orange: #ff9f43;
-    --green: #70d49a;
-    --blue: #6ea8ff;
+    --line: #d8d7d2;
+    --line-dark: #c7c6c0;
 
-    --mono: "SFMono-Regular",
-             "Cascadia Code",
-             "Roboto Mono",
-             Consolas,
-             monospace;
+    --red: #c93628;
+    --red-soft: #f4ddd9;
 
-    --sans: Inter,
-            ui-sans-serif,
-            -apple-system,
-            BlinkMacSystemFont,
-            "Segoe UI",
-            sans-serif;
+    --green: #28764c;
+    --green-soft: #dcebe2;
 
-    --serif: Georgia,
-             "Times New Roman",
-             serif;
+    --blue: #315f9d;
+
+    --mono:
+        "SFMono-Regular",
+        "Cascadia Code",
+        "Roboto Mono",
+        Consolas,
+        monospace;
+
+    --sans:
+        Inter,
+        ui-sans-serif,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    --serif:
+        Georgia,
+        "Times New Roman",
+        serif;
 }
+
 
 /* =========================================================
    RESET
@@ -63,50 +77,77 @@ html {
 }
 
 body {
+
     margin: 0;
-    background: var(--bg);
+
+    background:
+        linear-gradient(
+            rgba(255,255,255,.45),
+            rgba(255,255,255,.45)
+        ),
+        var(--bg);
+
     color: var(--text);
+
     font-family: var(--sans);
-    line-height: 1.6;
+
+    line-height: 1.55;
+
     overflow-x: hidden;
 }
 
-/* subtle technical background */
+
+/* =========================================================
+   SUBTLE PAPER GRID
+========================================================= */
 
 body::before {
+
     content: "";
+
     position: fixed;
+
     inset: 0;
+
     pointer-events: none;
-    opacity: .35;
+
+    opacity: .28;
 
     background-image:
+
         linear-gradient(
-            rgba(255,255,255,.025) 1px,
+            rgba(0,0,0,.025) 1px,
             transparent 1px
         ),
+
         linear-gradient(
             90deg,
-            rgba(255,255,255,.025) 1px,
+            rgba(0,0,0,.025) 1px,
             transparent 1px
         );
 
-    background-size: 48px 48px;
+    background-size: 42px 42px;
 
     mask-image:
         linear-gradient(
             to bottom,
             black,
-            transparent 75%
+            transparent 80%
         );
 }
 
+
 /* =========================================================
-   LAYOUT
+   GLOBAL
 ========================================================= */
 
 .container {
-    width: min(1180px, calc(100% - 42px));
+
+    width: min(
+        1080px,
+        calc(100% - 42px)
+    );
+
     margin: auto;
 }
 
@@ -114,110 +155,149 @@ main {
     position: relative;
 }
 
+a {
+    color: inherit;
+}
+
+
 /* =========================================================
    TOP BAR
 ========================================================= */
 
 .topbar {
-    height: 72px;
+
+    height: 68px;
 
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
 
-    border-bottom: 1px solid var(--line);
+    border-bottom:
+        1px solid var(--line);
 }
 
 .identity {
+
     display: flex;
+
     align-items: center;
-    gap: 12px;
+
+    gap: 11px;
 
     font-family: var(--mono);
-    font-size: 13px;
-    letter-spacing: .04em;
+
+    font-size: 10px;
+
+    letter-spacing: .09em;
+
+    color: var(--text-soft);
 }
 
 .identity-mark {
-    width: 10px;
-    height: 10px;
+
+    width: 8px;
+    height: 8px;
 
     background: var(--red);
 
-    box-shadow:
-        0 0 18px rgba(255,77,61,.65);
-
     transform: rotate(45deg);
+
+    box-shadow:
+        0 0 0 3px var(--red-soft);
 }
 
 .top-nav {
+
     display: flex;
-    gap: 25px;
+
+    gap: 24px;
 }
 
 .top-nav a {
-    color: var(--muted);
+
     text-decoration: none;
 
     font-family: var(--mono);
-    font-size: 11px;
+
+    font-size: 9px;
 
     text-transform: uppercase;
-    letter-spacing: .12em;
 
-    transition: .2s ease;
+    letter-spacing: .1em;
+
+    color: var(--muted);
+
+    transition: color .2s ease;
 }
 
 .top-nav a:hover {
-    color: var(--text);
+    color: var(--red);
 }
+
 
 /* =========================================================
    HERO
 ========================================================= */
 
 .hero {
-    min-height: 620px;
+
+    min-height: 540px;
 
     display: grid;
-    grid-template-columns: 1.45fr .75fr;
+
+    grid-template-columns:
+        minmax(0, 1.5fr)
+        minmax(220px, .6fr);
 
     align-items: center;
 
     gap: 70px;
 
-    padding: 90px 0 100px;
+    padding: 82px 0 90px;
 }
 
 .hero-kicker {
+
     font-family: var(--mono);
-    font-size: 11px;
+
+    font-size: 9px;
+
+    text-transform: uppercase;
+
+    letter-spacing: .17em;
 
     color: var(--red);
 
-    text-transform: uppercase;
-    letter-spacing: .18em;
-
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 .hero-kicker::before {
+
     content: "/// ";
+
     color: var(--dim);
 }
 
 .hero h1 {
+
     margin: 0;
 
-    max-width: 850px;
-
     font-family: var(--serif);
-    font-size: clamp(58px, 8vw, 105px);
+
+    font-size:
+        clamp(
+            46px,
+            6.3vw,
+            76px
+        );
+
+    line-height: .95;
 
     font-weight: 400;
-    letter-spacing: -.055em;
 
-    line-height: .91;
+    letter-spacing: -.045em;
 }
 
 .hero h1 span {
@@ -225,77 +305,104 @@ main {
 }
 
 .hero-description {
-    max-width: 680px;
 
-    margin-top: 35px;
+    max-width: 620px;
 
-    color: #a9adb4;
+    margin-top: 28px;
 
-    font-size: 17px;
-    line-height: 1.8;
+    color: var(--text-soft);
+
+    font-size: 14px;
+
+    line-height: 1.75;
 }
 
 .hero-description strong {
+
     color: var(--text);
-    font-weight: 500;
+
+    font-weight: 600;
 }
 
 .hero-meta {
-    margin-top: 38px;
 
     display: flex;
+
     flex-wrap: wrap;
-    gap: 9px;
+
+    gap: 7px;
+
+    margin-top: 28px;
 }
 
 .meta {
-    border: 1px solid var(--line);
 
-    padding: 8px 12px;
+    padding:
+        5px 9px;
+
+    border:
+        1px solid var(--line);
+
+    background:
+        rgba(255,255,255,.45);
 
     color: var(--muted);
 
     font-family: var(--mono);
-    font-size: 10px;
+
+    font-size: 8px;
 
     text-transform: uppercase;
-    letter-spacing: .08em;
+
+    letter-spacing: .07em;
 }
 
 .meta.active {
+
     color: var(--green);
-    border-color: rgba(112,212,154,.25);
+
+    border-color:
+        #b9d5c3;
+
+    background:
+        var(--green-soft);
 }
 
+
 /* =========================================================
-   HERO SIDE PANEL
+   HERO SIDE
 ========================================================= */
 
 .hero-side {
-    border-left: 1px solid var(--line);
 
-    padding-left: 35px;
+    border-left:
+        1px solid var(--line);
+
+    padding-left: 28px;
 
     font-family: var(--mono);
 }
 
 .side-label {
+
     color: var(--dim);
 
-    font-size: 10px;
+    font-size: 8px;
 
-    letter-spacing: .15em;
     text-transform: uppercase;
 
-    margin-bottom: 14px;
+    letter-spacing: .14em;
+
+    margin-bottom: 7px;
 }
 
 .side-value {
+
     color: var(--text);
 
-    font-size: 14px;
+    font-size: 12px;
 
-    margin-bottom: 34px;
+    margin-bottom: 24px;
 }
 
 .side-value.red {
@@ -303,161 +410,201 @@ main {
 }
 
 .side-line {
+
     height: 1px;
 
-    background: var(--line);
+    background:
+        var(--line);
 
-    margin: 25px 0;
+    margin: 20px 0;
 }
 
 .signal {
+
     display: flex;
+
     align-items: center;
-    gap: 9px;
+
+    gap: 8px;
 
     color: var(--green);
 
-    font-size: 11px;
+    font-size: 9px;
 }
 
 .signal-dot {
-    width: 6px;
-    height: 6px;
+
+    width: 5px;
+    height: 5px;
 
     border-radius: 50%;
 
-    background: var(--green);
-
-    box-shadow: 0 0 12px var(--green);
+    background:
+        var(--green);
 }
 
+
 /* =========================================================
-   SECTION
+   SECTIONS
 ========================================================= */
 
 section {
-    padding: 90px 0;
 
-    border-top: 1px solid var(--line);
+    padding: 72px 0;
+
+    border-top:
+        1px solid var(--line);
 }
 
 .section-heading {
+
     display: grid;
 
-    grid-template-columns: 180px 1fr;
+    grid-template-columns: 145px 1fr;
 
-    gap: 40px;
+    gap: 35px;
 
-    margin-bottom: 55px;
+    margin-bottom: 40px;
 }
 
 .section-index {
+
     font-family: var(--mono);
+
+    font-size: 9px;
 
     color: var(--red);
 
-    font-size: 11px;
     letter-spacing: .12em;
 }
 
 .section-title {
+
     margin: 0;
 
     font-family: var(--serif);
 
-    font-size: clamp(38px, 5vw, 62px);
-
     font-weight: 400;
 
-    letter-spacing: -.04em;
+    font-size:
+        clamp(
+            31px,
+            4vw,
+            44px
+        );
+
+    letter-spacing: -.035em;
 
     line-height: 1;
 }
 
 .section-description {
-    max-width: 650px;
 
-    margin-top: 17px;
+    max-width: 600px;
+
+    margin:
+        13px 0 0;
 
     color: var(--muted);
 
-    font-size: 14px;
+    font-size: 12px;
+
+    line-height: 1.7;
 }
 
+
 /* =========================================================
-   RESEARCH
+   RESEARCH LIST
 ========================================================= */
 
 .research-list {
-    border-top: 1px solid var(--line);
+
+    border-top:
+        1px solid var(--line);
 }
 
 .research-item {
+
     display: grid;
 
-    grid-template-columns: 80px 1fr 160px;
+    grid-template-columns:
+        58px
+        minmax(0, 1fr)
+        100px;
 
-    gap: 25px;
+    gap: 20px;
 
-    padding: 30px 0;
+    padding:
+        24px 0;
 
-    border-bottom: 1px solid var(--line);
+    border-bottom:
+        1px solid var(--line);
 
     text-decoration: none;
-    color: inherit;
 
     transition:
-        padding-left .25s ease,
-        background .25s ease;
+        background .2s ease,
+        padding-left .2s ease;
 }
 
 .research-item:hover {
-    padding-left: 14px;
-    background: rgba(255,255,255,.018);
+
+    background:
+        rgba(255,255,255,.55);
+
+    padding-left: 8px;
 }
 
 .research-number {
+
     font-family: var(--mono);
 
     color: var(--dim);
 
-    font-size: 11px;
+    font-size: 9px;
 }
 
 .research-title {
-    max-width: 750px;
+
+    max-width: 700px;
 
     font-family: var(--serif);
 
-    font-size: 25px;
+    font-size: 19px;
 
-    line-height: 1.2;
+    line-height: 1.25;
 }
 
 .research-meta {
-    margin-top: 12px;
 
     display: flex;
-    gap: 9px;
+
     flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-top: 8px;
 
     font-family: var(--mono);
 
-    font-size: 10px;
+    font-size: 8px;
 
     color: var(--muted);
 
     text-transform: uppercase;
+
+    letter-spacing: .06em;
 }
 
 .research-status {
+
     justify-self: end;
 
     align-self: start;
 
     font-family: var(--mono);
 
-    font-size: 10px;
+    font-size: 8px;
 
     color: var(--green);
 
@@ -467,137 +614,227 @@ section {
 }
 
 .research-status::before {
+
     content: "● ";
+
 }
+
 
 /* =========================================================
    DISCLOSURES
 ========================================================= */
 
 .disclosure-grid {
+
     display: grid;
 
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns:
+        repeat(2, 1fr);
 
-    border-top: 1px solid var(--line);
-    border-left: 1px solid var(--line);
+    border-top:
+        1px solid var(--line);
+
+    border-left:
+        1px solid var(--line);
 }
 
 .disclosure {
-    min-height: 210px;
 
-    padding: 30px;
+    min-height: 170px;
 
-    border-right: 1px solid var(--line);
-    border-bottom: 1px solid var(--line);
+    padding: 23px;
 
     position: relative;
 
-    transition: background .2s ease;
+    border-right:
+        1px solid var(--line);
+
+    border-bottom:
+        1px solid var(--line);
+
+    background:
+        rgba(255,255,255,.24);
+
+    transition:
+        background .2s ease;
 }
 
 .disclosure:hover {
-    background: var(--panel);
+
+    background:
+        var(--paper);
 }
 
 .disclosure-number {
+
+    margin-bottom: 25px;
+
     font-family: var(--mono);
 
     color: var(--dim);
 
-    font-size: 10px;
-
-    margin-bottom: 35px;
+    font-size: 8px;
 }
 
 .disclosure-vendor {
+
+    margin-bottom: 6px;
+
     font-family: var(--mono);
 
     color: var(--red);
 
-    font-size: 10px;
+    font-size: 8px;
 
     text-transform: uppercase;
-    letter-spacing: .13em;
 
-    margin-bottom: 9px;
+    letter-spacing: .12em;
 }
 
 .disclosure-title {
+
+    max-width: 390px;
+
     font-family: var(--serif);
 
-    font-size: 24px;
+    font-size: 19px;
 
-    line-height: 1.15;
+    line-height: 1.2;
 }
 
-.disclosure-badge {
+
+/* =========================================================
+   CASE LINK
+========================================================= */
+
+.case-link {
+
     position: absolute;
 
-    right: 25px;
-    bottom: 25px;
+    right: 22px;
 
-    font-family: var(--mono);
+    bottom: 20px;
 
-    font-size: 9px;
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    padding:
+        5px 7px;
+
+    border:
+        1px solid var(--line);
+
+    background:
+        rgba(255,255,255,.55);
 
     color: var(--muted);
 
-    border: 1px solid var(--line);
+    text-decoration: none;
 
-    padding: 5px 8px;
+    font-family: var(--mono);
+
+    font-size: 8px;
 
     text-transform: uppercase;
+
+    letter-spacing: .06em;
+
+    transition:
+        color .2s ease,
+        border-color .2s ease,
+        background .2s ease;
 }
 
+.case-link:hover {
+
+    color: var(--red);
+
+    border-color:
+        #d7aaa4;
+
+    background:
+        var(--red-soft);
+}
+
+
 /* =========================================================
-   AREAS
+   RESEARCH AREAS
 ========================================================= */
 
 .areas {
+
     display: grid;
 
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns:
+        repeat(4, 1fr);
 
-    border-top: 1px solid var(--line);
-    border-left: 1px solid var(--line);
+    border-top:
+        1px solid var(--line);
+
+    border-left:
+        1px solid var(--line);
 }
 
 .area {
-    min-height: 160px;
 
-    padding: 25px;
+    min-height: 135px;
 
-    border-right: 1px solid var(--line);
-    border-bottom: 1px solid var(--line);
+    padding: 22px;
+
+    border-right:
+        1px solid var(--line);
+
+    border-bottom:
+        1px solid var(--line);
+
+    background:
+        rgba(255,255,255,.2);
+
+    transition:
+        background .2s ease;
+}
+
+.area:hover {
+
+    background:
+        var(--paper);
 }
 
 .area-number {
+
     font-family: var(--mono);
 
-    font-size: 10px;
-
     color: var(--dim);
+
+    font-size: 8px;
 }
 
 .area h3 {
-    margin: 35px 0 0;
+
+    margin:
+        28px 0 0;
 
     font-family: var(--serif);
 
     font-weight: 400;
 
-    font-size: 23px;
+    font-size: 19px;
 }
 
+
 /* =========================================================
-   FOOTER / CONTACT
+   CONTACT
 ========================================================= */
 
 .contact {
+
     display: grid;
 
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns:
+        1fr 1fr;
 
     gap: 70px;
 
@@ -605,79 +842,57 @@ section {
 }
 
 .contact h2 {
+
     margin: 0;
 
     font-family: var(--serif);
 
-    font-size: clamp(45px, 6vw, 75px);
+    font-size:
+        clamp(
+            38px,
+            5vw,
+            58px
+        );
 
     font-weight: 400;
 
-    letter-spacing: -.05em;
+    letter-spacing: -.045em;
 
     line-height: .95;
 }
 
 .contact-copy {
+
+    max-width: 430px;
+
+    margin-top: 18px;
+
     color: var(--muted);
 
-    font-size: 14px;
+    font-size: 12px;
 
-    max-width: 470px;
-
-    margin-top: 25px;
+    line-height: 1.7;
 }
 
 .links {
-    display: flex;
 
-    flex-direction: column;
-
-    border-top: 1px solid var(--line);
+    border-top:
+        1px solid var(--line);
 }
 
 .link {
+
     display: flex;
 
     justify-content: space-between;
 
-    padding: 17px 0;
+    padding:
+        14px 0;
 
-    border-bottom: 1px solid var(--line);
+    border-bottom:
+        1px solid var(--line);
 
     text-decoration: none;
-
-    font-family: var(--mono);
-
-    font-size: 11px;
-
-    color: var(--text);
-
-    text-transform: uppercase;
-
-    letter-spacing: .08em;
-}
-
-.link span:last-child {
-    color: var(--dim);
-}
-
-.link:hover {
-    color: var(--red);
-}
-
-/* =========================================================
-   FOOTER
-========================================================= */
-
-footer {
-    padding: 35px 0 50px;
-
-    display: flex;
-
-    justify-content: space-between;
-
-    color: var(--dim);
 
     font-family: var(--mono);
 
@@ -685,8 +900,47 @@ footer {
 
     text-transform: uppercase;
 
-    letter-spacing: .1em;
+    letter-spacing: .07em;
 }
+
+.link span:last-child {
+
+    color: var(--dim);
+}
+
+.link:hover {
+
+    color: var(--red);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+
+    padding:
+        28px 0 42px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    border-top:
+        1px solid var(--line);
+
+    color: var(--dim);
+
+    font-family: var(--mono);
+
+    font-size: 8px;
+
+    text-transform: uppercase;
+
+    letter-spacing: .09em;
+}
+
 
 /* =========================================================
    RESPONSIVE
@@ -695,97 +949,138 @@ footer {
 @media (max-width: 800px) {
 
     .container {
-        width: min(100% - 28px, 1180px);
+
+        width:
+            min(
+                calc(100% - 28px),
+                1080px
+            );
     }
 
     .topbar {
+
         height: 60px;
     }
 
     .top-nav {
+
         display: none;
     }
 
     .hero {
-        min-height: auto;
 
         grid-template-columns: 1fr;
 
-        gap: 55px;
+        min-height: auto;
 
-        padding: 75px 0;
+        gap: 45px;
+
+        padding:
+            65px 0 70px;
     }
 
     .hero-side {
+
         border-left: 0;
 
-        border-top: 1px solid var(--line);
+        border-top:
+            1px solid var(--line);
 
-        padding: 25px 0 0;
+        padding:
+            22px 0 0;
 
         display: grid;
 
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .side-line {
-        display: none;
-    }
-
-    .section-heading {
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            1fr 1fr;
 
         gap: 15px;
     }
 
-    .research-item {
-        grid-template-columns: 35px 1fr;
+    .side-line {
 
-        gap: 10px;
+        display: none;
+    }
+
+    .section-heading {
+
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+    }
+
+    .research-item {
+
+        grid-template-columns:
+            35px
+            1fr;
     }
 
     .research-status {
+
         display: none;
     }
 
     .disclosure-grid {
+
         grid-template-columns: 1fr;
     }
 
     .areas {
-        grid-template-columns: 1fr 1fr;
+
+        grid-template-columns:
+            1fr 1fr;
     }
 
     .contact {
+
         grid-template-columns: 1fr;
 
-        gap: 50px;
+        gap: 45px;
     }
 
     footer {
+
         flex-direction: column;
-        gap: 10px;
+
+        gap: 8px;
     }
 }
+
 
 @media (max-width: 500px) {
 
     .hero h1 {
-        font-size: 57px;
+
+        font-size: 49px;
     }
 
     .hero-description {
-        font-size: 15px;
-    }
 
-    .areas {
-        grid-template-columns: 1fr;
+        font-size: 13px;
     }
 
     .hero-side {
+
         grid-template-columns: 1fr;
     }
+
+    .areas {
+
+        grid-template-columns: 1fr;
+    }
+
+    .research-title {
+
+        font-size: 17px;
+    }
+
+    .disclosure-title {
+
+        font-size: 18px;
+    }
 }
+
 </style>
 
 </head>
@@ -794,75 +1089,260 @@ footer {
 
 <div class="container">
 
-```
 <!-- =====================================================
      NAVIGATION
 ====================================================== -->
 
 <header class="topbar">
 
-    <div class="identity">
-        <span class="identity-mark"></span>
-        <span>NOOB6T5 / RESEARCH NODE</span>
-    </div>
+```
+<div class="identity">
 
-    <nav class="top-nav">
-        <a href="#research">Research</a>
-        <a href="#disclosures">Disclosures</a>
-        <a href="#areas">Focus</a>
-        <a href="#contact">Links</a>
-    </nav>
+    <span class="identity-mark"></span>
+
+    <span>
+        NOOB6T5 / RESEARCH NODE
+    </span>
+
+</div>
+
+
+<nav class="top-nav">
+
+    <a href="#research">
+        Research
+    </a>
+
+    <a href="#disclosures">
+        Disclosures
+    </a>
+
+    <a href="#areas">
+        Focus
+    </a>
+
+    <a href="#contact">
+        Links
+    </a>
+
+</nav>
+```
 
 </header>
 
-
 <main>
 
-    <!-- =================================================
-         HERO
-    ================================================== -->
+<!-- =====================================================
+     HERO
+====================================================== -->
 
-    <section class="hero" style="border-top:0;">
+<section
+    class="hero"
+    style="border-top:0;"
+>
+
+```
+<div>
+
+    <div class="hero-kicker">
+        Independent Security Research
+    </div>
+
+
+    <h1>
+
+        Sangharsha<br>
+
+        <span>
+            Upadhyaya.
+        </span>
+
+    </h1>
+
+
+    <p class="hero-description">
+
+        Security researcher working at the intersection of
+
+        <strong>
+            AI security, adversarial behavior,
+            application security, and game theory.
+        </strong>
+
+        Researching where systems behave differently
+        from what their designers assumed.
+
+    </p>
+
+
+    <div class="hero-meta">
+
+        <span class="meta active">
+            ● Currently Learning
+        </span>
+
+        <span class="meta">
+            Mathematics
+        </span>
+
+        <span class="meta">
+            Game Theory
+        </span>
+
+        <span class="meta">
+            AI Security
+        </span>
+
+        <span class="meta">
+            Red Teaming
+        </span>
+
+    </div>
+
+</div>
+
+
+<aside class="hero-side">
+
+
+    <div>
+
+        <div class="side-label">
+            Handle
+        </div>
+
+        <div class="side-value">
+            noob6t5
+        </div>
+
+    </div>
+
+
+    <div>
+
+        <div class="side-label">
+            Status
+        </div>
+
+        <div class="side-value red">
+            Research / Learning
+        </div>
+
+    </div>
+
+
+    <div class="side-line"></div>
+
+
+    <div>
+
+        <div class="side-label">
+            Current Direction
+        </div>
+
+        <div class="side-value">
+
+            Mathematics<br>
+            Game Theory<br>
+            AI Safety
+
+        </div>
+
+    </div>
+
+
+    <div class="side-line"></div>
+
+
+    <div class="signal">
+
+        <span class="signal-dot"></span>
+
+        Research node online
+
+    </div>
+
+
+</aside>
+```
+
+</section>
+
+<!-- =====================================================
+     RESEARCH
+====================================================== -->
+
+<section id="research">
+
+```
+<div class="section-heading">
+
+
+    <div class="section-index">
+        01 / RESEARCH
+    </div>
+
+
+    <div>
+
+        <h2 class="section-title">
+            Selected Work
+        </h2>
+
+
+        <p class="section-description">
+
+            Research papers and technical reports exploring
+            adaptive attackers, retrieval manipulation,
+            behavioral constraints, deceptive optimization,
+            and autonomous decision systems.
+
+        </p>
+
+    </div>
+
+
+</div>
+
+
+
+<div class="research-list">
+
+
+    <!-- PAPER 001 -->
+
+    <a
+        class="research-item"
+        href="https://zenodo.org/uploads/22074146"
+        target="_blank"
+        rel="noopener"
+    >
+
+        <div class="research-number">
+            001
+        </div>
+
 
         <div>
 
-            <div class="hero-kicker">
-                Independent Security Research
+            <div class="research-title">
+
+                AI Security and Game Theory:
+                Modeling Adaptive Attacker Best Responses
+
             </div>
 
-            <h1>
-                Sangharsha<br>
-                <span>Upadhyaya.</span>
-            </h1>
 
-            <p class="hero-description">
-                Security researcher working at the intersection of
-                <strong>AI security, adversarial behavior, application
-                security, and game theory.</strong>
-                Researching where systems behave differently from
-                what their designers assumed.
-            </p>
+            <div class="research-meta">
 
-            <div class="hero-meta">
-
-                <span class="meta active">
-                    ● Currently Learning
+                <span>
+                    Aug 24 2026
                 </span>
 
-                <span class="meta">
-                    Mathematics
-                </span>
+                <span>•</span>
 
-                <span class="meta">
-                    Game Theory
-                </span>
-
-                <span class="meta">
-                    AI Security
-                </span>
-
-                <span class="meta">
-                    Red Teaming
+                <span>
+                    Working Paper
                 </span>
 
             </div>
@@ -870,591 +1350,701 @@ footer {
         </div>
 
 
-        <aside class="hero-side">
+        <div class="research-status">
+            Open
+        </div>
 
-            <div>
+    </a>
 
-                <div class="side-label">
-                    Handle
-                </div>
 
-                <div class="side-value">
-                    noob6t5
-                </div>
 
-            </div>
+    <!-- PAPER 002 -->
 
-            <div>
+    <a
+        class="research-item"
+        href="https://zenodo.org/records/20356117"
+        target="_blank"
+        rel="noopener"
+    >
 
-                <div class="side-label">
-                    Status
-                </div>
+        <div class="research-number">
+            002
+        </div>
 
-                <div class="side-value red">
-                    Research / Learning
-                </div>
 
-            </div>
+        <div>
 
-            <div class="side-line"></div>
+            <div class="research-title">
 
-            <div>
-
-                <div class="side-label">
-                    Current Direction
-                </div>
-
-                <div class="side-value">
-                    Mathematics<br>
-                    Game Theory<br>
-                    AI Safety
-                </div>
+                Semantic Retrieval Poisoning
+                in Lightweight RAG Systems
 
             </div>
 
-            <div class="side-line"></div>
 
-            <div class="signal">
-                <span class="signal-dot"></span>
-                Research node online
-            </div>
+            <div class="research-meta">
 
-        </aside>
+                <span>
+                    May 23 2026
+                </span>
 
-    </section>
+                <span>•</span>
 
+                <span>
+                    Report
+                </span>
 
-    <!-- =================================================
-         RESEARCH
-    ================================================== -->
+                <span>•</span>
 
-    <section id="research">
-
-        <div class="section-heading">
-
-            <div class="section-index">
-                01 / RESEARCH
-            </div>
-
-            <div>
-
-                <h2 class="section-title">
-                    Selected Work
-                </h2>
-
-                <p class="section-description">
-                    Research papers and technical reports exploring
-                    adaptive attackers, retrieval manipulation,
-                    behavioral constraints, deceptive optimization,
-                    and autonomous decision systems.
-                </p>
+                <span>
+                    v1
+                </span>
 
             </div>
 
         </div>
 
 
-        <div class="research-list">
-
-            <a class="research-item"
-               href="https://zenodo.org/uploads/22074146"
-               target="_blank"
-               rel="noopener">
-
-                <div class="research-number">
-                    001
-                </div>
-
-                <div>
-
-                    <div class="research-title">
-                        AI Security and Game Theory:
-                        Modeling Adaptive Attacker Best Responses
-                    </div>
-
-                    <div class="research-meta">
-                        <span>Aug 24 2026</span>
-                        <span>•</span>
-                        <span>Working Paper</span>
-                    </div>
-
-                </div>
-
-                <div class="research-status">
-                    Open
-                </div>
-
-            </a>
-
-
-            <a class="research-item"
-               href="https://zenodo.org/records/20356117"
-               target="_blank"
-               rel="noopener">
-
-                <div class="research-number">
-                    002
-                </div>
-
-                <div>
-
-                    <div class="research-title">
-                        Semantic Retrieval Poisoning in
-                        Lightweight RAG Systems
-                    </div>
-
-                    <div class="research-meta">
-                        <span>May 23 2026</span>
-                        <span>•</span>
-                        <span>Report</span>
-                        <span>•</span>
-                        <span>v1</span>
-                    </div>
-
-                </div>
-
-                <div class="research-status">
-                    Open
-                </div>
-
-            </a>
-
-
-            <a class="research-item"
-               href="https://zenodo.org/records/19236696"
-               target="_blank"
-               rel="noopener">
-
-                <div class="research-number">
-                    003
-                </div>
-
-                <div>
-
-                    <div class="research-title">
-                        Temporal Weakening of KL-Regularized
-                        Safety Constraints
-                    </div>
-
-                    <div class="research-meta">
-                        <span>Mar 26 2026</span>
-                        <span>•</span>
-                        <span>Part I Continued</span>
-                        <span>•</span>
-                        <span>Report</span>
-                    </div>
-
-                </div>
-
-                <div class="research-status">
-                    Open
-                </div>
-
-            </a>
-
-
-            <a class="research-item"
-               href="https://zenodo.org/records/18485454"
-               target="_blank"
-               rel="noopener">
-
-                <div class="research-number">
-                    004
-                </div>
-
-                <div>
-
-                    <div class="research-title">
-                        Detectability Limits of Deceptive Optimization
-                        under KL-Regularized Behavioral Constraints
-                    </div>
-
-                    <div class="research-meta">
-                        <span>Feb 04 2026</span>
-                        <span>•</span>
-                        <span>Part I</span>
-                        <span>•</span>
-                        <span>Report</span>
-                    </div>
-
-                </div>
-
-                <div class="research-status">
-                    Open
-                </div>
-
-            </a>
-
-
-            <a class="research-item"
-               href="https://zenodo.org/records/18146404"
-               target="_blank"
-               rel="noopener">
-
-                <div class="research-number">
-                    005
-                </div>
-
-                <div>
-
-                    <div class="research-title">
-                        Breaking Symmetry in Autonomous Defensive
-                        Swarms Under Adversarial Pressure
-                    </div>
-
-                    <div class="research-meta">
-                        <span>Jan 04 2026</span>
-                        <span>•</span>
-                        <span>Decision-Layer Autonomy Model</span>
-                        <span>•</span>
-                        <span>v2</span>
-                    </div>
-
-                </div>
-
-                <div class="research-status">
-                    Open
-                </div>
-
-            </a>
-
+        <div class="research-status">
+            Open
         </div>
 
-    </section>
+    </a>
 
 
-    <!-- =================================================
-         DISCLOSURES
-    ================================================== -->
 
-    <section id="disclosures">
+    <!-- PAPER 003 -->
 
-        <div class="section-heading">
+    <a
+        class="research-item"
+        href="https://zenodo.org/records/19236696"
+        target="_blank"
+        rel="noopener"
+    >
 
-            <div class="section-index">
-                02 / DISCLOSURES
+        <div class="research-number">
+            003
+        </div>
+
+
+        <div>
+
+            <div class="research-title">
+
+                Temporal Weakening of
+                KL-Regularized Safety Constraints
+
             </div>
 
-            <div>
 
-                <h2 class="section-title">
-                    Security Cases
-                </h2>
+            <div class="research-meta">
 
-                <p class="section-description">
-                    Selected vulnerability research and responsible
-                    disclosures across web applications, identity
-                    systems, software, and AI model infrastructure.
-                </p>
+                <span>
+                    Mar 26 2026
+                </span>
+
+                <span>•</span>
+
+                <span>
+                    Part I Continued
+                </span>
+
+                <span>•</span>
+
+                <span>
+                    Report
+                </span>
 
             </div>
 
         </div>
 
 
-        <div class="disclosure-grid">
-
-            <article class="disclosure">
-
-                <div class="disclosure-number">
-                    CASE / 001
-                </div>
-
-                <div class="disclosure-vendor">
-                    TechPSC
-                </div>
-
-                <div class="disclosure-title">
-                    Access-Control Bypass
-                    & Mass PII Exposure
-                </div>
-
-                <div class="disclosure-badge">
-                    Hall of Fame
-                </div>
-
-            </article>
-
-
-            <article class="disclosure">
-
-                <div class="disclosure-number">
-                    CASE / 002
-                </div>
-
-                <div class="disclosure-vendor">
-                    Draw.io / JGraph
-                </div>
-
-                <div class="disclosure-title">
-                    Data Exfiltration
-                    & Stored XSS
-                </div>
-
-                <div class="disclosure-badge">
-                    CVE-2026-46642
-                </div>
-
-            </article>
-
-
-            <article class="disclosure">
-
-                <div class="disclosure-number">
-                    CASE / 003
-                </div>
-
-                <div class="disclosure-vendor">
-                    SAP
-                </div>
-
-                <div class="disclosure-title">
-                    Account Takeover
-                    Vulnerability
-                </div>
-
-                <div class="disclosure-badge">
-                    Advisory
-                </div>
-
-            </article>
-
-
-            <article class="disclosure">
-
-                <div class="disclosure-number">
-                    CASE / 004
-                </div>
-
-                <div class="disclosure-vendor">
-                    Substack
-                </div>
-
-                <div class="disclosure-title">
-                    OAuth Account
-                    Takeover
-                </div>
-
-                <div class="disclosure-badge">
-                    Hall of Fame
-                </div>
-
-            </article>
-
-
-            <article class="disclosure">
-
-                <div class="disclosure-number">
-                    CASE / 005
-                </div>
-
-                <div class="disclosure-vendor">
-                    University of Texas
-                </div>
-
-                <div class="disclosure-title">
-                    Information
-                    Disclosure
-                </div>
-
-                <div class="disclosure-badge">
-                    UT Austin HoF
-                </div>
-
-            </article>
-
-
-            <article class="disclosure">
-
-                <div class="disclosure-number">
-                    CASE / 006
-                </div>
-
-                <div class="disclosure-vendor">
-                    Huntr Model
-                </div>
-
-                <div class="disclosure-title">
-                    2× Critical
-                    Model-File Vulnerabilities
-                </div>
-
-                <div class="disclosure-badge">
-                    Private
-                </div>
-
-            </article>
-
+        <div class="research-status">
+            Open
         </div>
 
-    </section>
+    </a>
 
 
-    <!-- =================================================
-         RESEARCH AREAS
-    ================================================== -->
 
-    <section id="areas">
+    <!-- PAPER 004 -->
 
-        <div class="section-heading">
+    <a
+        class="research-item"
+        href="https://zenodo.org/records/18485454"
+        target="_blank"
+        rel="noopener"
+    >
 
-            <div class="section-index">
-                03 / FOCUS
+        <div class="research-number">
+            004
+        </div>
+
+
+        <div>
+
+            <div class="research-title">
+
+                Detectability Limits of
+                Deceptive Optimization under
+                KL-Regularized Behavioral Constraints
+
             </div>
 
-            <div>
 
-                <h2 class="section-title">
-                    Current Areas
-                </h2>
+            <div class="research-meta">
 
-                <p class="section-description">
-                    The problems currently occupying the research
-                    surface.
-                </p>
+                <span>
+                    Feb 04 2026
+                </span>
+
+                <span>•</span>
+
+                <span>
+                    Part I
+                </span>
+
+                <span>•</span>
+
+                <span>
+                    Report
+                </span>
 
             </div>
 
         </div>
 
 
-        <div class="areas">
+        <div class="research-status">
+            Open
+        </div>
 
-            <div class="area">
-
-                <div class="area-number">
-                    01
-                </div>
-
-                <h3>
-                    AI Security
-                </h3>
-
-            </div>
+    </a>
 
 
-            <div class="area">
 
-                <div class="area-number">
-                    02
-                </div>
+    <!-- PAPER 005 -->
 
-                <h3>
-                    Adversarial ML
-                </h3>
+    <a
+        class="research-item"
+        href="https://zenodo.org/records/18146404"
+        target="_blank"
+        rel="noopener"
+    >
 
-            </div>
+        <div class="research-number">
+            005
+        </div>
 
 
-            <div class="area">
+        <div>
 
-                <div class="area-number">
-                    03
-                </div>
+            <div class="research-title">
 
-                <h3>
-                    Game Theory
-                </h3>
+                Breaking Symmetry in Autonomous
+                Defensive Swarms Under Adversarial Pressure
 
             </div>
 
 
-            <div class="area">
+            <div class="research-meta">
 
-                <div class="area-number">
-                    04
-                </div>
+                <span>
+                    Jan 04 2026
+                </span>
 
-                <h3>
-                    Application Security
-                </h3>
+                <span>•</span>
+
+                <span>
+                    Decision-Layer Autonomy Model
+                </span>
+
+                <span>•</span>
+
+                <span>
+                    v2
+                </span>
 
             </div>
 
         </div>
 
-    </section>
+
+        <div class="research-status">
+            Open
+        </div>
+
+    </a>
 
 
-    <!-- =================================================
-         CONTACT
-    ================================================== -->
+</div>
+```
 
-    <section id="contact">
+</section>
 
-        <div class="contact">
+<!-- =====================================================
+     DISCLOSURES
+====================================================== -->
 
-            <div>
+<section id="disclosures">
 
-                <h2>
-                    Find<br>
-                    the work.
-                </h2>
-
-                <p class="contact-copy">
-                    Research, disclosures, experiments and whatever
-                    survives the transition from hypothesis to
-                    evidence.
-                </p>
-
-            </div>
+```
+<div class="section-heading">
 
 
-            <div class="links">
-
-                <a class="link"
-                   href="https://x.com/noob6t5"
-                   target="_blank"
-                   rel="noopener">
-
-                    <span>X / Twitter</span>
-                    <span>@noob6t5 ↗</span>
-
-                </a>
+    <div class="section-index">
+        02 / DISCLOSURES
+    </div>
 
 
-                <a class="link"
-                   href="https://hashnode.com/@noob6t5"
-                   target="_blank"
-                   rel="noopener">
+    <div>
 
-                    <span>Hashnode</span>
-                    <span>@noob6t5 ↗</span>
-
-                </a>
+        <h2 class="section-title">
+            Security Cases
+        </h2>
 
 
-                <a class="link"
-                   href="https://zenodo.org/search?q=metadata.creators.person_or_org.name:%22Upadhyaya,+Sangharsha%22"
-                   target="_blank"
-                   rel="noopener">
+        <p class="section-description">
 
-                    <span>Zenodo</span>
-                    <span>Research Archive ↗</span>
+            Selected vulnerability research and responsible
+            disclosures across web applications, identity
+            systems, software, and AI model infrastructure.
 
-                </a>
+        </p>
 
-            </div>
+    </div>
+
+
+</div>
+
+
+
+<div class="disclosure-grid">
+
+
+    <!-- TECHPSC -->
+
+    <article class="disclosure">
+
+        <div class="disclosure-number">
+            CASE / 001
+        </div>
+
+
+        <div class="disclosure-vendor">
+            TechPSC
+        </div>
+
+
+        <div class="disclosure-title">
+
+            Access-Control Bypass
+            & Mass PII Exposure
 
         </div>
 
-    </section>
+
+        <a
+            class="case-link"
+            href="https://techpsc.com/hall-of-fame/"
+            target="_blank"
+            rel="noopener"
+        >
+            Hall of Fame ↗
+        </a>
+
+    </article>
+
+
+
+    <!-- DRAW.IO -->
+
+    <article class="disclosure">
+
+        <div class="disclosure-number">
+            CASE / 002
+        </div>
+
+
+        <div class="disclosure-vendor">
+            Draw.io / JGraph
+        </div>
+
+
+        <div class="disclosure-title">
+
+            Data Exfiltration
+            & Stored XSS
+
+        </div>
+
+
+        <a
+            class="case-link"
+            href="https://nvd.nist.gov/vuln/detail/CVE-2026-46642"
+            target="_blank"
+            rel="noopener"
+        >
+            CVE-2026-46642 ↗
+        </a>
+
+    </article>
+
+
+
+    <!-- SAP -->
+
+    <article class="disclosure">
+
+        <div class="disclosure-number">
+            CASE / 003
+        </div>
+
+
+        <div class="disclosure-vendor">
+            SAP
+        </div>
+
+
+        <div class="disclosure-title">
+
+            Account Takeover
+            Vulnerability
+
+        </div>
+
+
+        <a
+            class="case-link"
+            href="https://www.sap.com/documents/2022/02/089613a0-167e-0010-bca6-c68f7e60039b.html"
+            target="_blank"
+            rel="noopener"
+        >
+            Security Advisory ↗
+        </a>
+
+    </article>
+
+
+
+    <!-- SUBSTACK -->
+
+    <article class="disclosure">
+
+        <div class="disclosure-number">
+            CASE / 004
+        </div>
+
+
+        <div class="disclosure-vendor">
+            Substack
+        </div>
+
+
+        <div class="disclosure-title">
+
+            OAuth Account
+            Takeover
+
+        </div>
+
+
+        <a
+            class="case-link"
+            href="https://substack.com/hall-of-fame"
+            target="_blank"
+            rel="noopener"
+        >
+            Hall of Fame ↗
+        </a>
+
+    </article>
+
+
+
+    <!-- UT AUSTIN -->
+
+    <article class="disclosure">
+
+        <div class="disclosure-number">
+            CASE / 005
+        </div>
+
+
+        <div class="disclosure-vendor">
+            University of Texas
+        </div>
+
+
+        <div class="disclosure-title">
+
+            Information
+            Disclosure
+
+        </div>
+
+
+        <a
+            class="case-link"
+            href="https://security.utexas.edu/hall-of-fame"
+            target="_blank"
+            rel="noopener"
+        >
+            UT Austin HoF ↗
+        </a>
+
+    </article>
+
+
+
+    <!-- HUNTR -->
+
+    <article class="disclosure">
+
+        <div class="disclosure-number">
+            CASE / 006
+        </div>
+
+
+        <div class="disclosure-vendor">
+            Huntr Model
+        </div>
+
+
+        <div class="disclosure-title">
+
+            2× Critical
+            Model-File Vulnerabilities
+
+        </div>
+
+
+        <span
+            class="case-link"
+            style="cursor:default;"
+        >
+            Private Disclosure
+        </span>
+
+    </article>
+
+
+</div>
+```
+
+</section>
+
+<!-- =====================================================
+     CURRENT AREAS
+====================================================== -->
+
+<section id="areas">
+
+```
+<div class="section-heading">
+
+
+    <div class="section-index">
+        03 / FOCUS
+    </div>
+
+
+    <div>
+
+        <h2 class="section-title">
+            Current Areas
+        </h2>
+
+
+        <p class="section-description">
+
+            The problems currently occupying
+            the research surface.
+
+        </p>
+
+    </div>
+
+
+</div>
+
+
+
+<div class="areas">
+
+
+    <div class="area">
+
+        <div class="area-number">
+            01
+        </div>
+
+        <h3>
+            AI Security
+        </h3>
+
+    </div>
+
+
+    <div class="area">
+
+        <div class="area-number">
+            02
+        </div>
+
+        <h3>
+            Adversarial ML
+        </h3>
+
+    </div>
+
+
+    <div class="area">
+
+        <div class="area-number">
+            03
+        </div>
+
+        <h3>
+            Game Theory
+        </h3>
+
+    </div>
+
+
+    <div class="area">
+
+        <div class="area-number">
+            04
+        </div>
+
+        <h3>
+            Application Security
+        </h3>
+
+    </div>
+
+
+</div>
+```
+
+</section>
+
+<!-- =====================================================
+     CONTACT
+====================================================== -->
+
+<section id="contact">
+
+```
+<div class="contact">
+
+
+    <div>
+
+        <h2>
+
+            Find<br>
+            the work.
+
+        </h2>
+
+
+        <p class="contact-copy">
+
+            Research, disclosures, experiments and whatever
+            survives the transition from hypothesis to evidence.
+
+        </p>
+
+    </div>
+
+
+
+    <div class="links">
+
+
+        <a
+            class="link"
+            href="https://x.com/noob6t5"
+            target="_blank"
+            rel="noopener"
+        >
+
+            <span>
+                X / Twitter
+            </span>
+
+            <span>
+                @noob6t5 ↗
+            </span>
+
+        </a>
+
+
+        <a
+            class="link"
+            href="https://hashnode.com/@noob6t5"
+            target="_blank"
+            rel="noopener"
+        >
+
+            <span>
+                Hashnode
+            </span>
+
+            <span>
+                @noob6t5 ↗
+            </span>
+
+        </a>
+
+
+        <a
+            class="link"
+            href="https://zenodo.org/"
+            target="_blank"
+            rel="noopener"
+        >
+
+            <span>
+                Zenodo
+            </span>
+
+            <span>
+                Research Archive ↗
+            </span>
+
+        </a>
+
+
+    </div>
+
+</div>
+```
+
+</section>
 
 </main>
 
+<!-- =====================================================
+     FOOTER
+====================================================== -->
 
 <footer>
 
-    <span>
-        NOOB6T5 / SANGHARSHA UPADHYAYA
-    </span>
+```
+<span>
+    NOOB6T5 / SANGHARSHA UPADHYAYA
+</span>
 
-    <span>
-        SECURITY RESEARCH · 2026
-    </span>
+<span>
+    SECURITY RESEARCH · 2026
+</span>
+```
 
 </footer>
-```
 
 </div>
 
