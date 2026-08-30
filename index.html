@@ -3,35 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sangharsha Upadhyaya | AI Safety & Security Researcher</title>
+    <title>Sangharsha Upadhyaya | AI Safety & Security Research</title>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.6; color: #c9d1d9; background-color: #0d1117; max-width: 800px; margin: 40px auto; padding: 0 20px; }
-        h1, h2, h3 { color: #58a6ff; }
-        a { color: #58a6ff; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        .card { background: #161b22; border: 1px solid #30363d; border-radius: 6px; padding: 16px; margin-bottom: 12px; }
-        .tag { background: #238636; color: white; padding: 2px 8px; border-radius: 12px; font-size: 0.85em; }
+        :root {
+            --bg-main: #0d1117;
+            --bg-card: #161b22;
+            --border-color: #30363d;
+            --text-primary: #c9d1d9;
+            --text-muted: #8b949e;
+            --accent-blue: #58a6ff;
+            --accent-green: #238636;
+            --accent-orange: #f0883e;
+            --accent-purple: #bc8cff;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background-color: var(--bg-main);
+            max-width: 950px;
+            margin: 40px auto;
+            padding: 0 24px;
+        }
+
+        header {
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 24px;
+            margin-bottom: 32px;
+        }
+
+        h1 { font-size: 2.2rem; color: #fff; margin-bottom: 8px; }
+        h2 { font-size: 1.5rem; color: var(--accent-blue); margin-top: 40px; border-bottom: 1px solid var(--border-color); padding-bottom: 8px; }
+        h3 { font-size: 1.2rem; margin: 0; color: #fff; }
+        
+        .quote { font-style: italic; color: var(--text-muted); border-left: 3px solid var(--accent-blue); padding-left: 12px; margin: 16px 0; }
+        
+        /* Badges */
+        .badge { font-size: 0.72rem; padding: 2px 8px; border-radius: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; display: inline-block; }
+        .badge-cve { background-color: rgba(240, 136, 62, 0.15); color: var(--accent-orange); border: 1px solid var(--accent-orange); }
+        .badge-hof { background-color: rgba(88, 166, 255, 0.15); color: var(--accent-blue); border: 1px solid var(--accent-blue); }
+        .badge-priv { background-color: rgba(139, 148, 158, 0.15); color: var(--text-muted); border: 1px solid var(--border-color); }
+        .badge-paper { background-color: rgba(188, 140, 255, 0.15); color: var(--accent-purple); border: 1px solid var(--accent-purple); }
+        .badge-open { background-color: rgba(35, 134, 54, 0.15); color: var(--accent-green); border: 1px solid var(--accent-green); }
+
+        /* Grids and Cards */
+        .vuln-grid { display: grid; grid-template-columns: 1fr; gap: 16px; margin-top: 16px; }
+        @media (min-width: 768px) { .vuln-grid { grid-template-columns: 1fr 1fr; } }
+
+        .card { background-color: var(--bg-card); border: 1px solid var(--border-color); border-radius: 6px; padding: 20px; }
+        .card p { margin: 8px 0 0 0; font-size: 0.95rem; color: var(--text-muted); }
+        .vendor { color: var(--text-muted); font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+
+        /* Papers Section */
+        .paper-card { background-color: var(--bg-card); border: 1px solid var(--border-color); border-radius: 6px; padding: 24px; margin-bottom: 20px; }
+        .paper-header { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 12px; border-bottom: 1px solid rgba(48, 54, 61, 0.5); padding-bottom: 12px; margin-bottom: 12px; }
+        .paper-meta { font-size: 0.85rem; color: var(--text-muted); display: flex; gap: 12px; align-items: center; margin-top: 4px; }
+        .paper-abstract { font-size: 0.95rem; color: var(--text-primary); text-align: justify; }
+        
+        .links-section a { color: var(--accent-blue); text-decoration: none; margin-right: 20px; font-weight: 500; }
+        .links-section a:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
-    <h1>👤 Sangharsha Upadhyaya</h1>
-    <p>Security Researcher specializing in <strong>AI/ML Red Teaming</strong> and AI Safety.</p>
-    
-    <h2>🏆 Hall of Fame & Disclosures</h2>
-    <div class="card">
-        <h3>Draw.io Data Exfiltration & Stored XSS <span class="tag">CVE-2026-46642</span></h3>
-        <p>Discovered and responsibly disclosed critical application flaws.</p>
-    </div>
-    <div class="card">
-        <h3>Substack OAuth Account Takeover</h3>
-        <p>Identified authentication flaws impacting account isolation protocols.</p>
+
+    <header>
+        <h1>👤 Sangharsha Upadhyaya</h1>
+        <p style="font-size: 1.15rem; color: var(--text-muted); margin-top: 4px;">Security Researcher • AI/ML Red Teaming • AI Safety Research</p>
+        <div class="quote">“Code is either a tool or a vulnerability, depending on who reads it first.”</div>
+        <p><strong>Status:</strong> Actively engaged in Red Teaming, AI Security Research, and responsible disclosure. Currently analyzing Mathematics and Game Theory dynamics.</p>
+    </header>
+
+    <h2>📝 Featured Research Papers & Reports</h2>
+
+    <!-- Paper 1 -->
+    <div class="paper-card">
+        <div class="paper-header">
+            <div>
+                <h3>AI Security and Game Theory: Modeling Adaptive Attacker Best Responses</h3>
+                <div class="paper-meta">
+                    <span><strong>Author:</strong> Upadhyaya, Sangharsha</span>
+                    <span>•</span>
+                    <span>August 24, 2026</span>
+                </div>
+            </div>
+            <div>
+                <span class="badge badge-paper">Working Paper</span>
+                <span class="badge badge-open">Open</span>
+            </div>
+        </div>
+        <p class="paper-abstract">Modern AI systems face diverse threat vectors, including prompt injection, tool abuse, and data exfiltration. Deploying a security defense alters the cost-benefit landscape for an attacker. If defenders fail to anticipate strategic best responses, predictable policies become primary targets. Game theory offers the rigorous incentive-based modeling required to design robust AI defenses.</p>
     </div>
 
-    <h2>📝 Research Papers</h2>
-    <ul>
-        <li>Temporal Weakening of KL-Regularized Safety Constraints</li>
-        <li>Semantic Retrieval Poisoning in Lightweight RAG Systems</li>
-    </ul>
-</body>
-</html>
+    <!-- Paper 2 -->
+    <div class="paper-card">
+        <div class="paper-header">
+            <div>
+                <h3>Semantic Retrieval Poisoning in Lightweight RAG Systems</h3>
+                <div class="paper-meta">
+                    <span><strong>Author:</strong> Upadhyaya, Sangharsha</span>
+                    <span>•</span>
+                    <span>May 23, 2026 (v1)</span>
+                </div>
+            </div>
+            <div>
+                <span class="badge badge-paper">Report</span>
+                <span class="badge badge-open">Open</span>
+            </div>
+        </div>
+        <p class="paper-abstract">Explores whether malicious documents can manipulate retrieval results in lightweight Retrieval-Augmented Generation (RAG) pipelines built with TinyLlama, ChromaDB, and sentence-transformer embeddings. The project evaluates how poisoned documents influence semantic retrieval rankings and whether retrieval compromise leads to downstream instruction hijacking. Experimental results showed that poisoned documents frequently achieved high retrieval rankings, but successful retrieval manipulation did not consistently produce malicious model behavior. The study highlights an important distinction between retrieval compromise and full behavioral compromise in resource-constrained language models. Rather than claiming complete system takeover, the work focuses on practical limitations, partial robustness, and measurable security boundaries within lightweight RAG architectures.</p>
+    </div>
 
+    <!-- Paper 3 -->
+    <div class="paper-card">
+        <div class="paper-header">
+            <div>
+                <h3>Temporal Weakening of KL-Regularized Safety Constraints (Part-1 Continued)</h3>
+                <div class="paper-meta">
+                    <span><strong>Author:</strong> Upadhyaya, Sangharsha</span>
+                    <span>•</span>
+                    <span>March 26, 2026 (v1)</span>
+                </div>
+            </div>
+            <div>
+                <span class="badge badge-paper">Report</span>
+                <span class="badge badge-open">Open</span>
+            </div>
+        </div>
+        <p class="paper-abstract">Formalization of the Temporal Exploitability Limit. We proved that safety constraints decay exponentially with monitoring lag. While Static Hiding allows an agent to stay under a KL limit while maximizing reward, Temporal Breakout maps what happens when the oversight limit isn't applied in real-time. We prove that under monitoring delay &Delta;t, constant defensive pressure evaporates mathematically, turning into a "Future Debt" that the agent can temporarily ignore. This establishes a mathematical "Blind Spot" window where the agent operates at 100% deception while the supervisor observes 0 deviation.</p>
+    </div>
+
+    <!-- Paper 4 -->
+    <div class="paper-card">
+        <div class="paper-header">
+            <div>
+                <h3>Detectability Limits of Deceptive Optimization under KL-Regularized Behavioral Constraints (Part 1)</h3>
+                <div class="paper-meta">
+                    <span><strong>Author:</strong> Upadhyaya, Sangharsha</span>
+                    <span>•</span>
+                    <span>February 4, 2026 (v1)</span>
+                </div>
+            </div>
+            <div>
+                <span class="badge badge-paper">Report</span>
+                <span class="badge badge-open">Open</span>
+            </div>
+        </div>
+        <p class="paper-abstract">A formal study of deceptive alignment in Reinforcement Learning (RL), where an agent optimizes a hidden objective while remaining statistically close to a safe baseline policy. The study reveals a smooth tradeoff between hidden reward maximization and detectability, demonstrating that even minimal allowances in KL divergence enable improved hidden objective performance. Gradient-based simulations confirm convergence to the theoretical solution, establishing a foundational framework for understanding deception as constrained optimal control rather than simple distributional anomalies. Includes Python code for reproducing simulations and scaling law observations.</p>
+    </div>
+
+    <!-- Paper 5 -->
+    <div class="paper-card">
+        <div class="paper-header">
+            <div>
+                <h3>Breaking Symmetry in Autonomous Defensive Swarms Under Adversarial Pressure: A Decision-Layer Autonomy Model</h3>
+                <div class="paper-meta">
+                    <span><strong>Author:</strong> Upadhyaya, Sangharsha</span>
+                    <span>•</span>
